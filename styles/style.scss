@@ -1,0 +1,640 @@
+html, body {
+    margin: 0;
+    padding: 0 0 5vh 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1A1930;
+}
+
+.header {
+    position: relative; /* important for absolute positioning inside */
+    width: 100%;
+    height: 60vh;
+}
+
+.logo {
+    position: absolute;
+    top: 5vh;   /* distance from top */
+    left: 6vw;  /* distance from left */
+    width: 16vw; /* adjust size as needed */
+    height: auto; /* keep aspect ratio */
+    z-index: 10;  /* ensures it stays above other elements */
+}
+
+.partners {
+    position: absolute;
+    bottom: 3vh; /* distance from bottom */
+    left: 2vw;  /* distance from left */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 55vw;
+    z-index: 10; /* ensures it stays above other elements */
+}
+
+.prijedlog {
+    width: auto;
+    height: 6vh;
+}
+
+.fer {
+    width: auto;
+    height: 6vh;
+}
+
+.eestec {
+    width: auto;
+    height: 12vh;
+}
+
+/* Grid container */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    width: 100vw;
+    height: 60vh; /* adjust overall height */
+    gap: 0;
+}
+
+/* Base cell style */
+.cell {
+    position: relative;
+    background: #1A1930;
+    overflow: hidden;
+}
+
+/* Purple overlays with rounded edges */
+
+/* 1. column — top 2/3 purple */
+.cell1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 66.6%;
+    background: #7D3FE7;
+    border-radius: 0 0 8px 8px;
+}
+
+/* 2. column — top 1/3 purple */
+.cell2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 33.3%;
+    background: #7D3FE7;
+    border-radius: 0 0 8px 8px;
+}
+
+/* 3. column — top 1/2 purple */
+.cell3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: #7D3FE7;
+    border-radius: 0 0 0 8px;
+}
+
+/* 4. column — middle 1/4 purple (25%–50%) */
+.cell4::before {
+    content: "";
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    background: #7D3FE7;
+    border-radius: 8px 8px 8px 0;
+}
+
+/* 5. column — top 1/4 purple */
+.cell5::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    background: #7D3FE7;
+    border-radius: 0 0 8px 8px;
+}
+
+/* 6. column — top 1/3 purple */
+.cell6::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 33.3%;
+    background: #7D3FE7;
+    border-radius: 0 0 0 8px;
+}
+
+/* 7. column — 8.3–33.3% purple section */
+.cell7::before {
+    content: "";
+    position: absolute;
+    top: 8.3%;
+    left: 0;
+    width: 100%;
+    height: 25%;
+    background: #7D3FE7;
+    border-radius: 8px 8px 0 0;
+}
+
+/* 8. column — top 1/3 purple */
+.cell8::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 33.3%;
+    background: #7D3FE7;
+    border-radius: 0 0 8px 0;
+}
+
+/* 9. column — middle 1/3 purple (33.3–66.6%) */
+.cell9::before {
+    content: "";
+    position: absolute;
+    top: 33.3%;
+    left: 0;
+    width: 100%;
+    height: 33.3%;
+    background: #7D3FE7;
+    border-radius: 8px;
+}
+
+/* 10. column — full purple */
+.cell10::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #7D3FE7;
+    border-radius: 0 0 8px 8px;
+}
+
+.header_text {
+    width: 70vw;
+}
+
+h1 {
+    color: #FFFFFF;
+    text-align: left;
+    margin: 0 0 0 2vw;
+    font-weight: 600;
+    font-size: 10vh;
+    font-family: 'Anek Devanagari', sans-serif;
+}
+
+h2 {
+    color: #F5F3F3;
+    text-align: left;
+    margin: 0 0 0 2vw;
+    font-weight: 550;
+    font-size: 6vh;
+    font-family: 'Inter', sans-serif;
+    margin-top: 10vh;
+}
+
+h3 {
+    color: #FFFFFF;
+    text-align: left;
+    margin: 1vh 0 2vh 2vw;
+    font-weight: 400;
+    font-size: 4vh;
+    font-family: 'Anek Devanagari', sans-serif;
+}
+
+.algotrade_container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    width: 100%;
+    aspect-ratio: 2048 / 1000;
+    overflow: hidden;
+}
+
+.part {
+    background-image: url("../images/algotrade.jpg");
+    background-size: 1000% 100%;
+    background-repeat: no-repeat;
+    background-position-x: calc(var(--i) * 11.12%);
+    background-position-y: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.part1 {
+    transform: scaleY(0.60);
+    transform-origin: bottom;
+    background-size: 1000% 166.67%;
+}
+
+.part2 {
+    transform: scaleY(0.70);
+    transform-origin: bottom;
+    background-size: 1000% 142.86%;
+}
+
+.part3 {
+    transform: scaleY(0.80);
+    transform-origin: bottom;
+    background-size: 1000% 125.00%;
+}
+
+.part4 {
+    transform: scaleY(0.65);
+    transform-origin: bottom;
+    background-size: 1000% 153.85%;
+}
+
+.part5 {
+    transform: scaleY(0.75);
+    transform-origin: bottom;
+    background-size: 1000% 133.33%;
+}
+
+.part6 {
+    transform: scaleY(0.65);
+    transform-origin: bottom;
+    background-size: 1000% 153.85%;
+    border-top-right-radius: 0;
+}
+
+.part7 {
+    transform: scaleY(0.65);
+    transform-origin: bottom;
+    background-size: 1000% 153.85%;
+    border-top-left-radius: 0;
+}
+
+.part8 {
+    transform: scaleY(0.60);
+    transform-origin: bottom;
+    background-size: 1000% 166.67%;
+}
+
+.part9 {
+    transform: scaleY(0.75);
+    transform-origin: bottom;
+    background-size: 1000% 133.33%;
+}
+
+.part10 {
+    transform: scaleY(0.65);
+    transform-origin: bottom;
+    background-size: 1000% 153.85%;
+}
+
+p.about {
+    color: #F5F3F3;
+    text-align: left;
+    margin: 4vh 0 0 2vw;
+    font-weight: 300;
+    font-size: 2.5vh;
+    font-family: 'Inter', sans-serif;
+}
+
+ul.about {
+    padding-bottom: 4vh;
+}
+
+li.about {
+    color: #F5F3F3;
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5vh;
+    font-weight: 300;
+    margin: 1vh 0 2vh 1vw;
+}
+
+strong.about {
+    font-weight: 650;
+}
+
+div.about_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vw;
+    margin: 0 2vw 0 2vw;
+    padding-bottom: 4vh;
+}
+
+.about_grid_num {
+    background-color: #2D205D;
+    border-radius: 8px;
+    color: #F5F3F3;
+    font-weight: 300;
+    font-size: 2.5vh;
+    font-family: 'Inter', sans-serif;
+    padding: 0 2vw 0 2vw;
+}
+
+p.about_grid {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5vw;
+}
+
+strong.about_grid {
+    font-weight: 800;
+    font-size: 10vh;
+    color: #C2E64A;
+    flex-shrink: 0;
+}
+
+.project_info_container {
+    position: relative;
+    height: 70vh;
+    margin: 4vh 0;
+    padding: 0 2vw;
+}
+
+.project_info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.5vw;
+    background-color: #5F18DBCC;
+    padding: 4vh 2vw;
+    border-radius: 8px;
+    max-height: 62vh;
+}
+
+.project_info_text {
+    flex: 0 0 60%;
+    margin: 0;
+}
+
+.project_info_text_h2 {
+    margin: 0;
+}
+
+.project_info_text_p {
+    margin: 4vh 0;
+    color: #F5F3F3;
+    text-align: left;
+    font-weight: 550;
+    font-size: 3vh;
+    font-family: 'Inter', sans-serif;
+}
+
+.project_info_image_container {
+    overflow: hidden;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+.project_info_image {
+    max-height: 100%;
+    width: auto;
+    overflow: hidden;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.project_info_grid {
+    display: grid;
+    grid-template-columns: 0.3fr 0.7fr;
+    width: fit-content;
+    gap: 4vh 4vw;
+}
+
+.project_info_grid_row {
+    margin: 0;
+    color: #F5F3F3;
+    text-align: left;
+    font-weight: 550;
+    font-size: 3vh;
+    font-family: 'Inter', sans-serif;
+}
+
+.project_info_grid_col {
+    margin: 0;
+    color: #F5F3F3;
+    text-align: left;
+    font-weight: 300;
+    font-size: 3vh;
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+}
+
+.project_info_grid_col.datum {
+    font-weight: 600;
+    color: #CBFD58;
+}
+
+.project_info_square {
+    position: absolute;
+    width: 2vw;
+    height: 2vw;
+    background-color: #CBFD58;
+    border-radius: 4px;
+}
+
+.project_info_square.one {
+    width: 5vw;
+    height: 5vw;
+    top: 4%;
+    right: 38%;
+}
+
+.project_info_square.two {
+    top: 5%;
+    right: 35%;
+}
+
+.project_info_square.three {
+    width: 7vw;
+    height: 7vw;
+    top: 70%;
+    right: 1.5%;
+}
+
+.project_info_square.four {
+    top: 76%;
+    right: 9.5%;
+}
+
+.project_info_square.five {
+    width: 5vw;
+    height: 5vw;
+    top: 85%;
+    right: 9.5%;
+}
+
+p.format {
+    margin: 0 2vw;
+    color: #F5F3F3;
+    text-align: left;
+    font-weight: 300;
+    font-size: 3vh;
+    font-family: 'Inter', sans-serif;
+    padding: 4vh 0;
+}
+
+span.format {
+    font-weight: 550;
+}
+
+.paketi_container {
+    margin: 4vh 2vw;
+    background-color: #2D205D;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+h2.paketi {
+    margin: 0;
+    padding: 4vh 2vw;
+}
+
+.paketi_row {
+    width: 100%;
+}
+
+.paketi_row.light {
+    background-color: rgba(54, 41, 107, 1);
+}
+
+.paketi_row.dark {
+    background-color: transparent;
+}
+
+.paketi_grid {
+    display: grid;
+    grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+    width: 100%;
+    align-items: center;
+    padding: 0 2vw 0 2vw;
+    box-sizing: border-box;
+}
+
+.paketi_grid_item {
+    font-family: 'Inter', sans-serif;
+    font-size: 2vh;
+    text-align: left;
+    font-weight: 300;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 2vh 0;
+}
+
+.paketi_grid_item.upper {
+    font-weight: 400;
+    font-size: 3vh;
+    color: #FFFFFF;
+    text-align: left;
+    align-self: end;
+}
+
+.paketi_grid_item.upper.one {
+    font-weight: 550;
+    font-size: 4vh;
+    padding-bottom: 0;
+}
+
+.paketi_grid_item.upper.two {
+    font-weight: 600;
+    font-size: 4vh;
+    color: #C2E64A;
+    padding: 0;
+}
+
+.paketi_grid_item.upper.three {
+    font-weight: 400;
+    font-size: 2vh;
+    color: #AFACBF;
+    padding-top: 0;
+;
+}
+
+.paketi_grid_item.inside {
+    justify-self: center;
+    height: 3vh;
+    width: auto;
+}
+
+.paketi_footer {
+    color: #C6C4D3;
+    text-align: left;
+    font-weight: 300;
+    font-size: 3vh;
+    font-family: 'Inter', sans-serif;
+    padding: 2vh 2vw;
+    margin: 1vh 0 0 0;
+}
+
+h2.becoming_partner {
+    margin-bottom: 5vh;
+}
+
+.becoming_partner_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;
+    margin: 0 2vw 5vh 2vw;
+}
+
+.becoming_partner_item {
+    background-color: #2D205D;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2vh 1vw;
+}
+
+.becoming_partner_p1 {
+    margin: 0;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 3vh;
+    font-family: 'Inter', sans-serif;
+}
+
+.becoming_partner_p2 {
+    margin: 0;
+    color: #AFACBF;
+    text-align: left;
+    font-weight: 300;
+    font-size: 3vh;
+    font-family: 'Inter', sans-serif;
+}
+
+.becoming_partner_image {
+    width: 9vh;
+    height: auto;
+    margin: 0 2vw;
+    flex-shrink: 0;
+}
+
+.becoming_partner_team_photo {
+    width: 96vw;
+    padding: 0 2vw;
+    height: 60vh;
+    object-fit: cover;
+    overflow: hidden;
+    margin-bottom: 4vh;
+}
+
+.contact_p {
+    margin: 2vh 2vw;
+    color: #AFACBF;
+    text-align: left;
+    font-weight: 300;
+    font-size: 3vh;
+    font-family: 'Inter', sans-serif;
+}
+
