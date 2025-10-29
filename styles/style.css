@@ -639,4 +639,65 @@ h2.becoming_partner {
   font-weight: 300;
   font-size: 3vh;
   font-family: "Inter", sans-serif;
+}
+
+.contact_info {
+  padding: 2vh 2vw;
+}
+
+.contact_info_name {
+  margin: 2vh 0;
+  color: #F5F3F3;
+  text-align: left;
+  font-weight: 550;
+  font-size: 3vh;
+  font-family: "Inter", sans-serif;
+}
+
+.contact_info_details {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-bottom: 3rem;
+}
+
+.email_phone_container {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  padding-top: 1vh;
+}
+
+.contact_info_email,
+.contact_info_phone {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  margin: 0;
+  color: #FFFFFF;
+  text-align: left;
+  font-weight: 300;
+  font-size: 3vh;
+  font-family: "Inter", sans-serif;
+}
+
+.contact_info_icon {
+  width: 3vh;
+  height: auto;
+}
+
+.contact_info_webpage {
+  margin: 0;
+  color: #C2E64A;
+  text-align: left;
+  font-weight: 300;
+  font-size: 3vh;
+  font-family: "Inter", sans-serif;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.contact_info_webpage:hover {
+  color: #A9CC3F;
 }/*# sourceMappingURL=style.css.map */
