@@ -1,62 +1,62 @@
 html, body {
     margin: 0;
-    padding: 0 0 5vh 0;
-    width: 100vw;
+    padding: 0 0 0 0;
+    width: 100%;
     height: 100vh;
     background-color: #1A1930;
+    // overflow-x: hidden;
 }
 
 .header {
-    position: relative; /* important for absolute positioning inside */
+    position: relative;
     width: 100%;
-    height: 60vh;
+    height: 33vw;
 }
 
 .logo {
     position: absolute;
-    top: 5vh;   /* distance from top */
-    left: 6vw;  /* distance from left */
-    width: 16vw; /* adjust size as needed */
-    height: auto; /* keep aspect ratio */
-    z-index: 10;  /* ensures it stays above other elements */
+    top: 2.75vw;
+    left: 6vw;
+    width: 16vw;
+    height: auto;
+    z-index: 10;
 }
 
 .partners {
     position: absolute;
-    bottom: 3vh; /* distance from bottom */
-    left: 2vw;  /* distance from left */
+    bottom: 1.65vw;
+    left: 2vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 55vw;
-    z-index: 10; /* ensures it stays above other elements */
+    height: auto;
+    z-index: 10;
 }
 
 .prijedlog {
-    width: auto;
-    height: 6vh;
+    width: 16vw;
+    height: auto;
 }
 
 .fer {
-    width: auto;
-    height: 6vh;
+    width: 8vw;
+    height: auto;
 }
 
 .eestec {
-    width: auto;
-    height: 12vh;
+    width: 16vw;
+    height: auto;
 }
 
-/* Grid container */
 .grid {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     width: 100vw;
-    height: 60vh; /* adjust overall height */
+    height: 33vw;
     gap: 0;
 }
 
-/* Base cell style */
 .cell {
     position: relative;
     background: #1A1930;
@@ -194,7 +194,7 @@ h1 {
     text-align: left;
     margin: 0 0 0 2vw;
     font-weight: 600;
-    font-size: 10vh;
+    font-size: 5.5vw;
     font-family: 'Anek Devanagari', sans-serif;
 }
 
@@ -203,9 +203,9 @@ h2 {
     text-align: left;
     margin: 0 0 0 2vw;
     font-weight: 550;
-    font-size: 6vh;
+    font-size: 3.3vw;
     font-family: 'Inter', sans-serif;
-    margin-top: 10vh;
+    margin-top: 5.5vw;
 }
 
 h3 {
@@ -213,7 +213,7 @@ h3 {
     text-align: left;
     margin: 1vh 0 2vh 2vw;
     font-weight: 400;
-    font-size: 4vh;
+    font-size: 2.2vw;
     font-family: 'Anek Devanagari', sans-serif;
 }
 
@@ -300,22 +300,22 @@ h3 {
 p.about {
     color: #F5F3F3;
     text-align: left;
-    margin: 4vh 0 0 2vw;
+    margin: 2.2vw 0 0 2vw;
     font-weight: 300;
-    font-size: 2.5vh;
+    font-size: 1.375vw;
     font-family: 'Inter', sans-serif;
 }
 
 ul.about {
-    margin-bottom: 6vh;
+    margin-bottom: 3.3vw;
 }
 
 li.about {
     color: #F5F3F3;
     font-family: 'Inter', sans-serif;
-    font-size: 2.5vh;
+    font-size: 1.375vw;
     font-weight: 300;
-    margin: 1vh 0 2vh 1vw;
+    margin: 0.55vw 0 1.1vw 1vw;
 }
 
 strong.about {
@@ -326,7 +326,7 @@ div.about_grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2vw;
-    margin: 2vh 2vw 8vh 2vw;
+    margin: 1.1vw 2vw 4.4vw 2vw;
 }
 
 .about_grid_num {
@@ -334,7 +334,7 @@ div.about_grid {
     border-radius: 8px;
     color: #F5F3F3;
     font-weight: 300;
-    font-size: 2.5vh;
+    font-size: 1.375vw;
     font-family: 'Inter', sans-serif;
     padding: 0 2vw 0 2vw;
 }
@@ -348,15 +348,15 @@ p.about_grid {
 
 strong.about_grid {
     font-weight: 800;
-    font-size: 10vh;
+    font-size: 5.5vw;
     color: #C2E64A;
     flex-shrink: 0;
 }
 
 .project_info_container {
     position: relative;
-    height: 70vh;
-    margin: 4vh 0;
+    height: 38.5vw;
+    margin: 2.2vw 0 4.4vw 0;
     padding: 0 2vw;
 }
 
@@ -366,9 +366,9 @@ strong.about_grid {
     justify-content: flex-start;
     gap: 1.5vw;
     background-color: #5F18DBCC;
-    padding: 4vh 2vw;
+    padding: 2.2vw 2vw;
     border-radius: 8px;
-    max-height: 62vh;
+    max-height: 34.1vw;
 }
 
 .project_info_text {
@@ -381,22 +381,23 @@ strong.about_grid {
 }
 
 .project_info_text_p {
-    margin: 4vh 0;
+    margin: 2.2vw 0;
     color: #F5F3F3;
     text-align: left;
     font-weight: 550;
-    font-size: 3vh;
+    font-size: 1.65vw;
     font-family: 'Inter', sans-serif;
 }
 
 .project_info_image_container {
+    max-height: 34.1vw;
     overflow: hidden;
     border-radius: 8px;
     height: fit-content;
 }
 
 .project_info_image {
-    max-height: 100%;
+    max-height: 34.1vw;
     width: auto;
     overflow: hidden;
     border-radius: 8px;
@@ -407,7 +408,7 @@ strong.about_grid {
     display: grid;
     grid-template-columns: 0.3fr 0.7fr;
     width: fit-content;
-    gap: 4vh 4vw;
+    gap: 4vw;
 }
 
 .project_info_grid_row {
@@ -415,7 +416,7 @@ strong.about_grid {
     color: #F5F3F3;
     text-align: left;
     font-weight: 550;
-    font-size: 3vh;
+    font-size: 1.65vw;
     font-family: 'Inter', sans-serif;
 }
 
@@ -424,7 +425,7 @@ strong.about_grid {
     color: #F5F3F3;
     text-align: left;
     font-weight: 300;
-    font-size: 3vh;
+    font-size: 1.65vw;
     font-family: 'Inter', sans-serif;
     padding: 0;
 }
@@ -474,11 +475,11 @@ strong.about_grid {
 }
 
 p.format {
-    margin: 4vh 2vw 0 2vw;
+    margin: 0 2vw;
     color: #F5F3F3;
     text-align: left;
     font-weight: 300;
-    font-size: 3vh;
+    font-size: 1.65vw;
     font-family: 'Inter', sans-serif;
 }
 
@@ -621,10 +622,10 @@ h2.becoming_partner {
 .team_photo {
     width: 96vw;
     padding: 0 2vw;
-    height: 60vh;
+    height: 33vw;
     object-fit: cover;
     overflow: hidden;
-    margin: 8vh 0;
+    margin: 4.4vw 0;
 }
 
 h2.contact {
@@ -632,24 +633,24 @@ h2.contact {
 }
 
 .contact_p {
-    margin: 2vh 2vw;
+    margin: 1.1vw 2vw;
     color: #AFACBF;
     text-align: left;
     font-weight: 300;
-    font-size: 3vh;
+    font-size: 1.65vw;
     font-family: 'Inter', sans-serif;
 }
 
 .contact_info {
-    padding: 2vh 2vw;
+    padding: 1.1vw 2vw;
 }
 
 .contact_info_name {
-    margin: 2vh 0;
+    margin: 1.1vw 0;
     color: #F5F3F3;
     text-align: left;
     font-weight: 550;
-    font-size: 3vh;
+    font-size: 1.65vw;
     font-family: 'Inter', sans-serif;
 }
 
@@ -663,8 +664,8 @@ h2.contact {
 .email_phone_container {
     display: flex;
     flex-direction: column;
-    gap: 1vh;
-    padding-top: 1vh;
+    gap: 0.55vw;
+    padding-top: 0.55vw;
 }
 
 .contact_info_email,
@@ -676,12 +677,12 @@ h2.contact {
     color: #FFFFFF;
     text-align: left;
     font-weight: 300;
-    font-size: 3vh;
+    font-size: 1.65vw;
     font-family: 'Inter', sans-serif;
 }
 
 .contact_info_icon {
-    width: 3vh;
+    width: 1.65vw;
     height: auto;
 }
 
@@ -690,7 +691,7 @@ h2.contact {
     color: #C2E64A;
     text-align: left;
     font-weight: 300;
-    font-size: 3vh;
+    font-size: 1.65vw;
     font-family: 'Inter', sans-serif;
     text-decoration: underline;
     cursor: pointer;
@@ -739,77 +740,3 @@ h2.contact {
 .fade-down:nth-child(6) { transition-delay: 0.1s; }
 .fade-down:nth-child(4) { transition-delay: 0.2s; }
 .fade-down:nth-child(9) { transition-delay: 0.3s; }
-
-
-/* Large tablets & small laptops */
-@media (max-width: 1200px) {
-  .project_info,
-  .about_grid {
-    flex-direction: column;
-    align-items: center;
-  }
-  .project_info_image {
-    width: 90%;
-  }
-}
-
-/* Tablets */
-@media (max-width: 992px) {
-  h1, h2, h3 {
-    text-align: center;
-  }
-  .header_text h1 {
-    font-size: 2rem;
-  }
-  .about_grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .paketi_grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .project_info {
-    flex-direction: column;
-  }
-}
-
-/* Mobile phones */
-@media (max-width: 768px) {
-  .header img.logo {
-    width: 60%;
-  }
-  .partners {
-    flex-direction: column;
-    align-items: center;
-  }
-  .partner-logo {
-    width: 120px;
-    margin: 10px 0;
-  }
-  .becoming_partner_grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  .project_info_grid {
-    grid-template-columns: 1fr;
-  }
-  .paketi_grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Extra small screens */
-@media (max-width: 576px) {
-  body {
-    padding: 0 1rem;
-  }
-  p, li {
-    font-size: 0.95rem;
-  }
-  h1 {
-    font-size: 1.6rem;
-  }
-  h2 {
-    font-size: 1.3rem;
-  }
-}

@@ -26,30 +26,32 @@ const observer = new IntersectionObserver(
 
 fadeDowns.forEach(el => observer.observe(el));
 
-window.addEventListener('scroll', () => {
-  const buffer = 50;
+function handleFadeUps() {
+  const buffer = window.innerHeight * 0.01;
 
   fadeUps.forEach(el => {
     const rect = el.getBoundingClientRect();
 
-    if (rect.top < 30) {
-        el.classList.add('visible');
-        el.classList.remove('fade-out-down');
-        return;
+    if (rect.top < buffer) {
+      el.classList.add('visible');
+      el.classList.remove('fade-out-down');
+      return;
     }
 
-    if (rect.top < window.innerHeight - buffer && rect.bottom > buffer && rect.top > 0) {
-      if (!el.classList.contains('visible')) {
-        el.classList.add('visible');
-        el.classList.remove('fade-out-down');
-      }
+    if (rect.top < window.innerHeight - buffer) {
+      el.classList.add('visible');
+      el.classList.remove('fade-out-down');
     }
 
-    if (rect.bottom < buffer || rect.top > window.innerHeight - buffer) {
-      if (!el.classList.contains('fade-out-down')) {
-        el.classList.remove('visible');
-        el.classList.add('fade-out-down');
-      }
+    else if (rect.top >= window.innerHeight - buffer) {
+      el.classList.remove('visible');
+      el.classList.add('fade-out-down');
     }
   });
-});
+}
+
+window.addEventListener('scroll', handleFadeUps);
+
+window.addEventListener('load', handleFadeUps);
+
+window.addEventListener('resize', handleFadeUps);
