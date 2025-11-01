@@ -5,12 +5,28 @@ html, body {
   width: 100%;
   height: 100vh;
   background-color: #1A1930;
+  min-width: 370px;
+}
+
+h1, h2, h3, p, li, strong, span {
+  word-break: normal;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  white-space: normal;
+  max-width: 90%;
 }
 
 .header {
   position: relative;
   width: 100%;
   height: 33vw;
+  min-width: 370px;
+}
+
+#grid {
+  min-width: 370px;
 }
 
 .logo {
@@ -354,20 +370,18 @@ strong.about_grid {
 
 .project_info_container {
   position: relative;
-  height: 38.5vw;
   margin: 2.2vw 0 4.4vw 0;
   padding: 0 2vw;
 }
 
 .project_info {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: flex-start;
   gap: 1.5vw;
   background-color: rgba(95, 24, 219, 0.8);
   padding: 2.2vw 2vw;
   border-radius: 8px;
-  max-height: 34.1vw;
 }
 
 .project_info_text {
@@ -389,20 +403,22 @@ strong.about_grid {
 }
 
 .project_info_image_container {
-  max-height: 34.1vw;
+  max-width: 50%;
   overflow: hidden;
   border-radius: 8px;
-  height: -moz-fit-content;
-  height: fit-content;
+  display: flex;
+  align-items: flex-start;
+  justify-items: flex-start;
 }
 
 .project_info_image {
-  max-height: 34.1vw;
+  height: 100%;
   width: auto;
+  max-width: 100%;
   overflow: hidden;
   border-radius: 8px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .project_info_grid {
@@ -622,12 +638,13 @@ h2.becoming_partner {
 
 .team_photo {
   width: 96vw;
-  padding: 0 2vw;
+  min-width: 360px;
+  min-height: 150px;
   height: 33vw;
   -o-object-fit: cover;
      object-fit: cover;
   overflow: hidden;
-  margin: 4.4vw 0;
+  margin: 4.4vw 2vw;
 }
 
 h2.contact {
@@ -660,7 +677,7 @@ h2.contact {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  padding-bottom: 3rem;
+  padding-bottom: 4vh;
 }
 
 .email_phone_container {
@@ -706,7 +723,7 @@ h2.contact {
 
 .fade-down {
   opacity: 0;
-  transform: translateY(-30px);
+  transform: translateY(-25px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
   will-change: opacity, transform;
 }
@@ -755,4 +772,154 @@ h2.contact {
 
 .fade-down:nth-child(9) {
   transition-delay: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .header_text {
+    width: 90vw;
+  }
+  h1 {
+    font-size: 42px;
+  }
+  h2 {
+    font-size: 25px;
+    margin-top: 40px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  p.about,
+  li.about,
+  .about_grid_num,
+  .project_info_text_p,
+  .project_info_grid_row,
+  .project_info_grid_col,
+  p.format,
+  .paketi_grid_item,
+  .paketi_footer,
+  .becoming_partner_p1,
+  .becoming_partner_p2,
+  .contact_p,
+  .contact_info_name,
+  .contact_info_email,
+  .contact_info_phone,
+  .contact_info_webpage {
+    font-size: 12px;
+  }
+  .contact_info_icon {
+    width: 14px;
+    height: auto;
+  }
+  .logo {
+    width: 120px;
+  }
+  .prijedlog {
+    width: 90px;
+  }
+  .fer {
+    width: 60px;
+  }
+  .eestec {
+    width: 100px;
+  }
+  strong.about_grid {
+    font-size: 48px;
+  }
+}
+@media (max-width: 617px) {
+  .header_text {
+    width: 90vw;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 25px;
+    margin-top: 40px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  .partners {
+    width: 70vw;
+  }
+  .logo {
+    width: 90px;
+  }
+}
+@media (max-width: 473px) {
+  .header_text {
+    width: 100%;
+  }
+  h1 {
+    font-size: 26px;
+  }
+  h2 {
+    font-size: 25px;
+    margin-top: 40px;
+  }
+  h3 {
+    font-size: 12px;
+  }
+  .partners {
+    width: 80vw;
+    min-width: 300px;
+  }
+  .logo {
+    width: 65px;
+  }
+  .prijedlog {
+    width: 70px;
+  }
+  .fer {
+    width: 40px;
+  }
+  .eestec {
+    width: 80px;
+  }
+  div.about_grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  strong.about_grid {
+    font-size: 40px;
+  }
+  p.about_grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vw;
+    font-size: 15px;
+  }
+  .project_info {
+    flex-wrap: wrap;
+  }
+  .project_info_text {
+    flex: 1;
+    margin: 0;
+  }
+  .project_info_image_container {
+    max-width: 100%;
+  }
+  .project_info_square.one {
+    background-color: transparent;
+  }
+  .project_info_square.two {
+    background-color: transparent;
+  }
+  .project_info_square.five {
+    background-color: transparent;
+  }
+  .project_info_text_p {
+    font-size: 12px;
+  }
+  .project_info_grid {
+    width: 100%;
+    margin: 3vw 0;
+  }
+  .project_info_grid_row {
+    font-size: 12px;
+  }
+  .project_info_grid_col {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=style.css.map */
