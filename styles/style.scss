@@ -767,16 +767,16 @@ h2.contact {
     }
     
     h1 {
-        font-size: 42px;
+        font-size: 7vw;
     }
 
     h2 {
-        font-size: 25px;
-        margin-top: 40px;
+        font-size: 5vw;
+        margin-top: 7vw;
     }
 
     h3 {
-        font-size: 16px;
+        font-size: 4vw;
     }
 
     p.about,
@@ -795,157 +795,40 @@ h2.contact {
     .contact_info_email,
     .contact_info_phone,
     .contact_info_webpage {
-        font-size: 12px;
+        font-size: 2.3vw;
     }
 
     .contact_info_icon {
-        width: 14px;
+        width: 3vw;
         height: auto;
     }
 
     .logo {
-        width: 120px;
+        width: 18vw;
+        top: 3vw;
     }
 
     .prijedlog {
-        width: 90px;
+        width: 18vw;
     }
 
     .fer {
-        width: 60px;
+        width: 10vw;
     }
 
     .eestec {
-        width: 100px;
+        width: 18vw;
     }
 
     strong.about_grid {
-        font-size: 48px;
-    }
-}
-
-@media (max-width: 617px) {
-    .header_text {
-        width: 90vw;
-    }
-
-    h1 {
-        font-size: 32px;
-    }
-
-    h2 {
-        font-size: 25px;
-        margin-top: 40px;
-    }
-
-    h3 {
-        font-size: 14px;
-    }
-  
-    .partners {
-        width: 70vw;
-    }
-
-    .logo {
-        width: 90px;
-    }
-}
-
-@media (max-width: 473px) {
-    .header_text {
-        width: 100%;
-    }
-
-    h1 {
-        font-size: 26px;
-    }
-
-    h2 {
-        font-size: 25px;
-        margin-top: 40px;
-    }
-
-    h3 {
-        font-size: 12px;
-    }
-  
-    .partners {
-        width: 80vw;
-        min-width: 300px;
-    }
-
-    .logo {
-        width: 65px;
-    }
-
-    .prijedlog {
-        width: 70px;
-    }
-
-    .fer {
-        width: 40px;
-    }
-
-    .eestec {
-        width: 80px;
+        font-size: 6.5vw;
     }
 
     div.about_grid {
-        grid-template-columns: repeat(1, 1fr);
-
+        gap: 1.5vw
     }
 
-    strong.about_grid {
-        font-size: 40px;
-    }
-
-    p.about_grid {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1.5vw;
-        font-size: 15px;
-    }
-
-    .project_info {
-        flex-wrap: wrap;
-    }
-
-    .project_info_text {
-        flex: 1;
-        margin: 0;
-    }
-
-    .project_info_image_container {
-        max-width: 100%;
-    }
-
-    .project_info_square.one {
-        background-color: transparent;
-    }
-
-    .project_info_square.two {
-        background-color: transparent;
-    }
-
-    .project_info_square.five {
-        background-color: transparent;
-    }
-
-    .project_info_text_p {
-        font-size: 12px;
-    }
-
-    .project_info_grid {
-        width: 100%;
-        margin: 3vw 0;
-    }
-
-    .project_info_grid_row {
-        font-size: 12px;
-    }
-
-    .project_info_grid_col {
-        font-size: 12px;
+    .about_grid_num {
+        padding: 0 1vw 0 1vw;
     }
 }
