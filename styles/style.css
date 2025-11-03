@@ -319,6 +319,7 @@ p.about {
   font-weight: 300;
   font-size: 1.375vw;
   font-family: "Inter", sans-serif;
+  width: 60vw;
 }
 
 ul.about {
@@ -352,6 +353,10 @@ div.about_grid {
   font-size: 1.375vw;
   font-family: "Inter", sans-serif;
   padding: 0 2vw 0 2vw;
+}
+
+.about_grid_two {
+  padding-right: 12vw;
 }
 
 p.about_grid {
@@ -400,6 +405,7 @@ strong.about_grid {
   font-weight: 550;
   font-size: 1.65vw;
   font-family: "Inter", sans-serif;
+  width: 38vw;
 }
 
 .project_info_image_container {
@@ -805,6 +811,10 @@ h2.contact {
   .contact_info_phone,
   .contact_info_webpage {
     font-size: 2.3vw;
+    width: auto;
+  }
+  .project_info_text_p {
+    width: 45vw;
   }
   .contact_info_icon {
     width: 3vw;
