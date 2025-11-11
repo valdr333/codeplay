@@ -41,11 +41,12 @@ h1, h2, h3 {
 .partners {
     position: absolute;
     bottom: 1.65vw;
-    left: 2vw;
+    left: calc((100vw - (100vw / 1512px * 1200px)) / 2);
+    right: calc((100vw - (100vw / 1512px * 1200px)) / 2);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 55vw;
+    width: 20vw;
     height: auto;
     z-index: 10;
 }
@@ -56,12 +57,12 @@ h1, h2, h3 {
 }
 
 .fer {
-    width: 8vw;
+    width: 6vw;
     height: auto;
 }
 
 .eestec {
-    width: 16vw;
+    width: 10vw;
     height: auto;
 }
 
@@ -203,14 +204,15 @@ h1, h2, h3 {
 
 .header_text {
     width: 70vw;
+    margin: 0 calc((100vw - (100vw / 1512px * 1200px)) / 2);
 }
 
 h1 {
     color: #FFFFFF;
     text-align: left;
-    margin: 0 0 0 2vw;
+    margin: 0;
     font-weight: 600;
-    font-size: 5.5vw;
+    font-size: 4.2vw;
     font-family: 'Anek Devanagari', sans-serif;
 }
 
@@ -227,10 +229,27 @@ h2 {
 h3 {
     color: #FFFFFF;
     text-align: left;
-    margin: 1vh 0 2vh 2vw;
+    margin: 1vh 0 2vh;
     font-weight: 400;
     font-size: 2.2vw;
     font-family: 'Anek Devanagari', sans-serif;
+}
+
+.register_button {
+    margin-top: 2vw;
+    padding: 1vw 1.5vw;
+    font-size: 1.4vw;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    color: #1A1930;
+    background-color: #C2E64A;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.register_button:hover {
+    background-color: #A9CC3F;
 }
 
 .algotrade_container {
@@ -313,26 +332,45 @@ h3 {
     background-size: 1000% 153.85%;
 }
 
+div.traka {
+    width: 100vw;
+    height: 3vw;
+    margin-top: 5.5vw;
+    border-radius: 4px;
+    background: url("../images/traka.png") repeat-x;
+    background-size: contain;
+}
+
+div.about {
+    margin: 0 calc((100vw - (100vw / 1512px * 1200px)) / 2);
+}
+
+h2.about {
+    margin-left: 0;
+}
+
 p.about {
     color: #F5F3F3;
     text-align: left;
-    margin: 2.2vw 0 0 2vw;
+    margin: 2.2vw 0 0 0;
     font-weight: 300;
-    font-size: 1.375vw;
+    font-size: 1.2vw;
     font-family: 'Inter', sans-serif;
-    width: 60vw;
+    width: 80vw;
 }
 
 ul.about {
-    margin-bottom: 3.3vw;
+    margin-bottom: 0 0 3.3vw 0;
+    padding-inline-start: 20px;
 }
 
 li.about {
     color: #F5F3F3;
     font-family: 'Inter', sans-serif;
-    font-size: 1.375vw;
+    font-size: 1.2vw;
     font-weight: 300;
-    margin: 0.55vw 0 1.1vw 1vw;
+    margin: 0.55vw 0 1.1vw 0;
+    padding: 0;
 }
 
 strong.about {
@@ -343,7 +381,7 @@ div.about_grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2vw;
-    margin: 1.1vw 2vw 4.4vw 2vw;
+    margin: 1.1vw 0 4.4vw 0;
 }
 
 .about_grid_num {
@@ -353,11 +391,7 @@ div.about_grid {
     font-weight: 300;
     font-size: 1.375vw;
     font-family: 'Inter', sans-serif;
-    padding: 0 2vw 0 2vw;
-}
-
-.about_grid_two {
-    padding-right: 12vw;
+    padding: 0 1vw 0 1.5vw;
 }
 
 p.about_grid {
@@ -377,7 +411,7 @@ strong.about_grid {
 .project_info_container {
     position: relative;
     margin: 2.2vw 0 4.4vw 0;
-    padding: 0 2vw;
+    padding: 0 calc((100vw - (100vw / 1512px * 1200px)) / 2);
 }
 
 .project_info {
@@ -388,10 +422,11 @@ strong.about_grid {
     background-color: #5F18DBCC;
     padding: 2.2vw 2vw;
     border-radius: 8px;
+    min-height: 60vh;
 }
 
 .project_info_text {
-    flex: 0 0  60%;
+    flex: 0 0  65%;
     margin: 0;
 }
 
@@ -404,9 +439,9 @@ strong.about_grid {
     color: #F5F3F3;
     text-align: left;
     font-weight: 550;
-    font-size: 1.65vw;
+    font-size: 1.2vw;
     font-family: 'Inter', sans-serif;
-    width: 38vw;
+    width: 50vw;
 }
 
 .project_info_image_container {
@@ -429,9 +464,9 @@ strong.about_grid {
 
 .project_info_grid {
     display: grid;
-    grid-template-columns: 0.3fr 0.7fr;
+    grid-template-columns: 0.3fr 1.3fr;
     width: fit-content;
-    gap: 4vw;
+    gap: 2vw;
 }
 
 .project_info_grid_row {
@@ -439,7 +474,7 @@ strong.about_grid {
     color: #F5F3F3;
     text-align: left;
     font-weight: 550;
-    font-size: 1.65vw;
+    font-size: 1.2vw;
     font-family: 'Inter', sans-serif;
 }
 
@@ -448,7 +483,7 @@ strong.about_grid {
     color: #F5F3F3;
     text-align: left;
     font-weight: 300;
-    font-size: 1.65vw;
+    font-size: 1.2vw;
     font-family: 'Inter', sans-serif;
     padding: 0;
 }
@@ -470,39 +505,39 @@ strong.about_grid {
     width: 5vw;
     height: 5vw;
     top: 4%;
-    right: 38%;
+    right: 34%;
 }
 
 .project_info_square.two {
     top: 5%;
-    right: 35%;
+    right: 31%;
 }
 
 .project_info_square.three {
     width: 7vw;
     height: 7vw;
     top: 70%;
-    right: 1.5%;
+    right: 9%;
 }
 
 .project_info_square.four {
     top: 76%;
-    right: 9.5%;
+    right: 17%;
 }
 
 .project_info_square.five {
     width: 5vw;
     height: 5vw;
     top: 85%;
-    right: 9.5%;
+    right: 17%;
 }
 
 p.format {
-    margin: 0 2vw;
+    margin: 0 calc((100vw - (100vw / 1512px * 1200px)) / 2);
     color: #F5F3F3;
     text-align: left;
     font-weight: 300;
-    font-size: 1.65vw;
+    font-size: 1.2vw;
     font-family: 'Inter', sans-serif;
 }
 
@@ -598,15 +633,21 @@ h2.paketi {
     margin: 1vh 0 0 0;
 }
 
+div.becoming_partner {
+    margin: 0 calc((100vw - (100vw / 1512px * 1200px)) / 2);
+}
+
 h2.becoming_partner {
     margin-bottom: 5vh;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .becoming_partner_grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2vw;
-    margin: 0 2vw 5vh 2vw;
+    margin: 0 0 5vh 0;
 }
 
 .becoming_partner_item {
@@ -615,7 +656,7 @@ h2.becoming_partner {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 2vh 1vw;
+    padding: 4vh 1vw 2vh 1vw;
 }
 
 .becoming_partner_p1 {
@@ -643,21 +684,21 @@ h2.becoming_partner {
 }
 
 .team_photo {
-    width: 96vw;
+    width: 100vw / 1512px * 1200px;
     min-width: 360px;
     min-height: 150px;
     height: 33vw;
     object-fit: cover;
     overflow: hidden;
-    margin: 4.4vw 2vw;
+    margin: 4.4vw calc((100vw - (100vw / 1512px * 1200px)) / 2);
 }
 
 h2.contact {
-    margin-top: 0;
+    margin: 0 calc((100vw - (100vw / 1512px * 1200px)) / 2);
 }
 
 .contact_p {
-    margin: 1.1vw 2vw;
+    margin: 1.1vw calc((100vw - (100vw / 1512px * 1200px)) / 2);
     color: #AFACBF;
     text-align: left;
     font-weight: 300;
@@ -666,11 +707,11 @@ h2.contact {
 }
 
 .contact_info {
-    padding: 1.1vw 2vw;
+    padding: 1.1vw 0;
 }
 
 .contact_info_name {
-    margin: 1.1vw 0;
+    margin: 1.1vw calc((100vw - (100vw / 1512px * 1200px)) / 2);
     color: #F5F3F3;
     text-align: left;
     font-weight: 550;
@@ -683,6 +724,7 @@ h2.contact {
     align-items: flex-end;
     justify-content: space-between;
     padding-bottom: 4vh;
+    margin: 0 calc((100vw - (100vw / 1512px * 1200px)) / 2);
 }
 
 .email_phone_container {
