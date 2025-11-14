@@ -326,8 +326,17 @@ div.traka {
   border-radius: 4px;
   background: url("../images/traka.png") repeat-x;
   background-size: contain;
+  animation: scrollBg 9s linear infinite;
 }
 
+@keyframes scrollBg {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: 534px;
+  }
+}
 .project_info_grid {
   display: grid;
   width: 100%;
@@ -1079,5 +1088,43 @@ h2.paketi {
     overflow: hidden;
     justify-self: center;
     margin: 100px 16px;
+  }
+}
+@media (max-width: 534px) {
+  div.traka {
+    width: 100%;
+    height: 52px;
+    margin: 100px 0;
+    border-radius: 4px;
+    background: url("../images/traka.png") repeat-x;
+    background-size: contain;
+    animation: scrollBg 9s linear infinite;
+  }
+  @keyframes scrollBg {
+    from {
+      background-position-x: 0;
+    }
+    to {
+      background-position-x: 100vw;
+    }
+  }
+}
+@media (max-width: 370px) {
+  div.traka {
+    width: 100%;
+    height: 52px;
+    margin: 100px 0;
+    border-radius: 4px;
+    background: url("../images/traka.png") repeat-x;
+    background-size: contain;
+    animation: scrollBg 9s linear infinite;
+  }
+  @keyframes scrollBg {
+    from {
+      background-position-x: 0;
+    }
+    to {
+      background-position-x: 370px;
+    }
   }
 }/*# sourceMappingURL=style.css.map */
