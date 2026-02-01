@@ -85,8 +85,8 @@ const faqData = [
       { question: "Što je hackathon i što se tamo radi?", answer: "Hackathon je natjecanje koje traje jedan ili dva dana. Tijekom tog vremena timovi rade na zadatku i natječu se tko će ga najbolje riješiti. Uz znanje, važno je biti snalažljiv i brz, a najbolji timovi osvajaju nagrade. Čak i ako ne pobijedite, uvijek nastane zanimljiv projekt koji svi mogu ponijeti kući i pokazati!" },
       { question: "Tko se može prijaviti?", answer: "Mogu se prijaviti svi učenici srednjih škola iz Republike Hrvatske." },
       { question: "Trebam li prethodno znanje iz programiranja ili elektronike?", answer: "Poželjno je da znaš osnove barem jednog programskog jezika, ali sve ostalo će biti objašnjeno i mentorirano tijekom hackathona." },
-      { question: "Mogu li sudjelovati sam/a ili moram biti u timu?", answer: "Možeš se prijaviti samostalno ili s timom, samo označi to u prijavnoj formi." },
-      { question: "Koliko sudionika može biti u timu?", answer: "Tim može imati između 3 i 6 članova." },
+      { question: "Mogu li sudjelovati sam/a ili moram biti u timu?", answer: "Možeš se prijaviti isključivo s timom, a tim možeš prijaviti sam ili vas može prijaviti profesor/mentor." },
+      { question: "Koliko sudionika može biti u timu?", answer: "Tim može imati između 4 i 6 članova." },
       { question: "Mogu li se prijaviti učenici iz drugih gradova ili škola?", answer: "Da! Podržavamo učenike iz cijele Hrvatske da nam se pridruže na FER-u." },
     ],
     // Prijava
