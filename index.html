@@ -1,266 +1,363 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hr">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Codeplay</title>
-    <link rel="icon" type="image/png" href="images/icon.png">
-    <script type="module" src="script.js"></script>
-    <link rel="stylesheet" href="styles/style.css">
-    <meta name="format-detection" content="telephone=no">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="google-site-verification" content="53Jlvc62kmMSG5GI7ZIjSf7A9RiCoFPlJhpAOzXcrjc"> -->
+  <title>CODEPLAY Hackathon | EESTEC LC Zagreb</title>
+  <meta name="description" content="CODEPLAY je srednjoškolski hackathon u Zagrebu koji spaja programiranje i elektrotehniku. Prijavi se i sudjeluj!">
+  <link rel="canonical" href="https://eestec.hr/codeplay">
+  <link rel="icon" type="image/png" href="images/icon.png">
+  
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <div class="header">
-        <a href="index.html"><img src="images/codeplay_logo.svg" alt="Logo" class="logo fade-down"></a>
-        <div class="grid fade-down" id="grid"></div>
+  <div class="codeplay-page">
+      <div class="header">
+        <div class="header_nav_div" id="headerNav">
+          <div class="header_nav_container">
+          <a href="#" onclick="location.reload();" class="logo fade-down">
+            <img
+              src="/images/codeplay_logo.svg"
+              alt="Logo"
+              class="logo_image"
+            />
+          </a>
+          <nav class="header_nav desktop fade-down">
+            <a class="header_nav_a fade-down" href="#raspored">Raspored</a>
+            <a class="header_nav_a fade-down" href="#nagrade">Nagrade</a>
+            <a class="header_nav_a fade-down" href="#pitanja">Pitanja</a>
+          </nav>
+          <div class="hamburger_menu fade-down" id="hamburgerMenu">
+            <span class="bar top"></span>
+            <span class="bar bottom"></span>
+          </div>
+          <nav class="header_nav_mobile">
+            <a class="header_nav_a_mobile" href="#raspored">Raspored</a>
+            <a class="header_nav_a_mobile" href="#nagrade">Nagrade</a>
+            <a class="header_nav_a_mobile" href="#pitanja">Pitanja</a>
+            <div class="header_socials_mobile">
+              <a
+                href="https://www.instagram.com/codeplay_zagreb/?utm_source=ig_web_button_share_sheet"
+                target="_blank"
+                rel="noopener noreferrer"
+                >
+                <img
+                  src="/images/instagram.svg"
+                  alt="Instagram"
+                  class="header_instagram"
+                  />
+              </a>
+              <a
+                href="https://www.tiktok.com/@codeplay_zagreb?is_from_webapp=1&sender_device=pc"
+                target="_blank"
+                rel="noopener noreferrer"
+                >
+                <img
+                  src="/images/tiktok.svg"
+                  alt="Tiktok"
+                  class="header_tiktok"
+                  />
+              </a>
+            </div>
+          </nav>
+          </div>
+        </div>
+        <div class="grid" id="grid"></div>
         <div class="header_text">
-            <h3 class="fade-down">CODEPLAY</h3>
-            <h1 class="fade-down">Srednjoškolsko natjecanje koje spaja znanja iz programiranja i elektrotehnike</h1>
-            <p class="fade-down">Prijavi se na hackathon koji spaja kreativnost, timski rad i tehnologiju! U tri dana nauči kako spojiti kod i elektroniku te razviti vlastiti uređaj uz super ekipu istih interesa.</p>
-            <a class="register_button fade-up" href="https://forms.gle/b38DofdXhy6oEAV19" target="_blank" rel="noopener noreferrer">Prijavi se&nbsp;&nbsp;&#8594;</a>
+          <img
+              src="/images/sticker_rocket.svg"
+              class="sticker rocket fade-down"
+            />
+          <img
+              src="/images/sticker_heart.svg"
+              class="sticker heart fade-down"
+            />
+          <img
+              src="/images/sticker_play.svg"
+              class="sticker play fade-down"
+            />
+          <h1 class="h1 fade-down">
+            Srednjoškolsko natjecanje koje&nbsp;potiče stvaranje vlastitih tehnoloških projekata
+          </h1>
+          <p class="p fade-down">
+            Prijavi se na hackathon koji spaja kreativnost, timski rad i tehnologiju! Nauči kako spojiti kod i elektroniku te razviti vlastiti uređaj uz super ekipu istih interesa.
+          </p>
+          <div class="header_buttons">
+            <a
+              class="register_button fade-down"
+              href="https://forms.gle/b38DofdXhy6oEAV19"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Prijavi se!
+            </a>
+            <a
+              class="more_button fade-down"
+              href="#about"
+            >
+              Saznaj više
+            </a>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="algotrade_container fade-up">
-        <div class="part part1" style="--i:0"></div>
-        <div class="part part2" style="--i:1"></div>
-        <div class="part part3" style="--i:2"></div>
-        <div class="part part4" style="--i:3"></div>
-        <div class="part part5" style="--i:4"></div>
-        <div class="part part6" style="--i:5"></div>
-        <div class="part part7" style="--i:6"></div>
-        <div class="part part8" style="--i:7"></div>
-        <div class="part part9" style="--i:8"></div>
-        <div class="part part10" style="--i:9"></div>
-    </div>
+      <div class="algotrade_container fade-up">
+        <div class="part part1"></div>
+        <div class="part part2"></div>
+        <div class="part part3"></div>
+        <div class="part part4"></div>
+        <div class="part part5"></div>
+        <div class="part part6"></div>
+        <div class="part part7"></div>
+        <div class="part part8"></div>
+        <div class="part part9"></div>
+        <div class="part part10"></div>
+      </div>
 
-    <div class="traka fade-up"></div>
+      <div class="traka fade-up" id="about"></div>
 
-    <div class="project_info_grid">
-        <p class="project_info_grid_row datum fade-up">27. 2. – 1. 3. 2026.</p>
-        <p class="project_info_grid_row mjesto fade-up">FER, Zagreb</p>
+      <div class="project_info_grid">
+        <p class="p project_info_grid_row datum fade-up">
+          28. 2. – 1. 3. 2026.
+        </p>
+        <p class="p project_info_grid_row mjesto fade-up">FER, Zagreb</p>
         <div class="project_info_grid_row container">
-            <p class="project_info_grid_row container fade-up">20 timova</p>
-            <p class="project_info_grid_row container fade-up">100 sudionika</p>
-            <p class="project_info_grid_row container fade-up">20 mentora</p>
+          <p class="p project_info_grid_row container fade-up">20 timova</p>
+          <p class="p project_info_grid_row container fade-up">100 sudionika</p>
+          <p class="p project_info_grid_row container fade-up">20 mentora</p>
         </div>
-    </div>
+      </div>
 
-    <div class="register">
-        <h2 class="register fade-up">Zašto&nbsp;se&nbsp;prijaviti?</h2>
+      <div class="register">
+        <h2 class="h2 register fade-up">Zašto&nbsp;se&nbsp;prijaviti?</h2>
         <div class="register_grid">
-            <div class="register_item fade-up">
-                <img src="images/rocket.svg" alt="Rocket" class="register_image fade-up">
-                <div class="register_p fade-up">
-                    <p class="register_p1">Hands-on izazov</p>
-                    <p class="register_p2">Isprobat ćeš pravi inženjerski izazov u opuštenoj, ali natjecateljskoj atosmferi.</p>
-                </div>
+          <div class="register_item fade-up">
+            <img
+              src="/images/rocket.svg"
+              alt="Rocket"
+              class="register_image fade-up"
+            />
+            <div class="register_p fade-up">
+              <p class="p register_p1">Hands-on izazov</p>
+              <p class="p register_p2">
+                Isprobat ćeš pravi inženjerski izazov u opuštenoj, ali
+                natjecateljskoj atosmferi.
+              </p>
             </div>
-            <div class="register_item fade-up">
-                <img src="images/hat.svg" alt="Hat" class="register_image fade-up">
-                <div class="register_p fade-up">
-                    <p class="register_p1">Praktično znanje</p>
-                    <p class="register_p2">Naučit ćeš kako spojiti kod i elektroniku u funkcionalan projekt.</p>
-                </div>
+          </div>
+          <div class="register_item fade-up">
+            <img
+              src="/images/hat.svg"
+              alt="Hat"
+              class="register_image fade-up"
+            />
+            <div class="register_p fade-up">
+              <p class="p register_p1">Praktično znanje</p>
+              <p class="p register_p2">
+                Naučit ćeš kako spojiti kod i elektroniku u funkcionalan
+                projekt.
+              </p>
             </div>
-            <div class="register_item fade-up">
-                <img src="images/message.svg" alt="Message" class="register_image fade-up">
-                <div class="register_p fade-up">
-                    <p class="register_p1">Networking</p>
-                    <p class="register_p2">Upoznat ćeš studente FER-a koji su već prošli ono što tebe čeka.</p>
-                </div>
+          </div>
+          <div class="register_item fade-up">
+            <img
+              src="/images/message.svg"
+              alt="Message"
+              class="register_image fade-up"
+            />
+            <div class="register_p fade-up">
+              <p class="p register_p1">Networking</p>
+              <p class="p register_p2">
+                Upoznat ćeš studente FER-a koji su već prošli ono što tebe
+                čeka.
+              </p>
             </div>
-            <div class="register_item fade-up">
-                <img src="images/heart.svg" alt="Heart" class="register_image fade-up">
-                <div class="register_p fade-up">
-                    <p class="register_p1">Puno zabave</p>
-                    <p class="register_p2">Odlična atmosfera, novi prijatelji, nagrade i puno zabave.</p>
-                </div>
+          </div>
+          <div class="register_item fade-up">
+            <img
+              src="/images/heart.svg"
+              alt="Heart"
+              class="register_image fade-up"
+            />
+            <div class="register_p fade-up">
+              <p class="p register_p1">Puno zabave</p>
+              <p class="p register_p2">
+                Odlična atmosfera, novi prijatelji, nagrade i puno zabave.
+              </p>
             </div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="timetable_container fade-up">
+      <div class="timetable_container fade-up" id="raspored">
         <div class="timetable">
-            <div class="timetable_text">
-                <h2 class="timetable_text_h2 fade-up">Raspored</h2>
-                <div class="timetable_list">
-                    <div class="timetable_box">
-                        <p class="timetable_box_title fade-up"><span class="timetable_box_title">1. dan</span> - Otvorenje</p>
-                        <p class="timetable_box_p fade-up">Upoznavanje sudionika, upoznavanje s mentorima, postavljanje alata i priprema za pravi izazov.</p>
-                    </div>
-                    <div class="timetable_box">
-                        <p class="timetable_box_title fade-up"><span class="timetable_box_title">2. dan</span> - Glavni zadatak</p>
-                        <p class="timetable_box_p fade-up">Vaš tim dobiva zadatak koji kombinira progrmiranje i elektroniku. Na vama je da osmislite, spojite i isprogramirate vlastiti uređaj uz pomoć mentora.</p>
-                    </div>
-                    <div class="timetable_box">
-                        <p class="timetable_box_title fade-up"><span class="timetable_box_title">3. dan</span> - Finale</p>
-                        <p class="timetable_box_p fade-up">Predstavljate svoj projekt pred žirijem i ostalim sudionicima. Najbolji timovi odnose nagrade, ali svi odlaze s novim iskustvom, znanjem i svojim uređajem!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="timetable_image_container fade-up">
-                <img src="images/algotrade_2.jpg" alt="Algotrade 2" class="timetable_image algotrade_2 fade-up">
-                <div class="timetable_square one fade-up"></div>
-                <div class="timetable_square two fade-up"></div>
-                <div class="timetable_square three fade-up"></div>
-                <div class="timetable_square four fade-up"></div>
-                <div class="timetable_square five fade-up"></div>
-            </div>
-        </div>
-    </div>
+          <div class="timetable_text">
+            <h2 class="h2 timetable_text_h2 fade-up">Raspored</h2>
+            <div class="timetable_list">
+              <div class="timetable_box">
+                <p class="p timetable_box_title fade-up">
+                  <span class="span timetable_box_title">1. dan</span> - Otvorenje i glavni zadatak
+                </p>
+                <ul class="ul timetable_box_ul fade-up">
+                  <li class="li timetable_box_li fade-up">Dolazak sudionika, upoznavanje s mentorima i kratko predstavljanje programa.</li>
+                  <li class="li timetable_box_li fade-up">Nakon uvoda timovi preuzimaju zadatak i započinju rad uz podršku mentora.</li>
+                </ul>
+              </div>
+              <div class="timetable_box">
+                <p class="p timetable_box_title fade-up">
+                  <span class="span timetable_box_title">2. dan</span> - Finale i nagrade
+                </p>
+                <ul class="ul timetable_box_ul fade-up">
+                  <li class="li timetable_box_li fade-up">Prezentacijama pred žirijem i sudionicima.</li>
+                  <li class="li timetable_box_li fade-up">Nakon toga slijedi proglašenje pobjednika i dodjela nagrada.</li>
+                </ul>
+              </div>
 
-    <div class="prize">
-        <h2 class="prize fade-up">Nagrade</h2>
-        <p class="prize fade-up">Svim sudionicima bit će dodijeljeni:</p>
+            </div>
+          </div>
+          <div class="timetable_image_container fade-up">
+            <img
+              src="/images/algotrade_2.jpg"
+              alt="Algotrade 2"
+              class="timetable_image algotrade_2 fade-up"
+            />
+            <div class="timetable_square one fade-up"></div>
+            <div class="timetable_square two fade-up"></div>
+            <div class="timetable_square three fade-up"></div>
+            <div class="timetable_square four fade-up"></div>
+            <div class="timetable_square five fade-up"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="prize" id="nagrade">
+        <h2 class="h2 prize fade-up">Nagrade</h2>
+        <p class="p prize fade-up">Što dobiva svaki sudionik?</p>
         <ul class="prize">
-            <li class="prize fade-up">merch</li>
-            <li class="prize fade-up">oprema za rad</li>
-            <li class="prize fade-up">hrana i piće</li>
+          <li class="li prize fade-up"><span class="span prize">Oprema za rad</span> - sve što koristiš tijekom natjecanja nosiš kući</li>
+          <li class="li prize fade-up"><span class="span prize">Besplatna hrana i piće</span> - kroz cijeli događaj</li>
+          <li class="li prize fade-up"><span class="span prize">Posebni FER & Codeplay materijali</span> - limitirani promo stuff</li>
+          <li class="li prize fade-up"><span class="span prize">Nagrade sponzora</span> - ideš kući bogatiji</li>
         </ul>
-        <h3 class="prize fade-up">Glavne nagrade</h3>
+        <h3 class="h3 prize fade-up">Glavne nagrade</h3>
         <div class="prize_grid">
-            <div class="prize_grid_one prize_grid_num fade-up">
-                <p class="prize_grid_p1">1. nagrada</p>
-                <p class="prize_grid_p2">€€€</p>
-            </div>
-            <div class="prize_grid_two prize_grid_num fade-up">
-                <p class="prize_grid_p1">2. nagrada</p>
-                <p class="prize_grid_p2">€€</p>
-            </div>
-            <div class="prize_grid_three prize_grid_num fade-up">
-                <p class="prize_grid_p1">3. nagrada</p>
-                <p class="prize_grid_p2">€</p>
-            </div>
+          <div class="prize_grid_one prize_grid_num fade-up">
+            <p class="p prize_grid_p1">1. nagrada</p>
+            <p class="p prize_grid_p2">1000 €</p>
+          </div>
+          <div class="prize_grid_two prize_grid_num fade-up">
+            <p class="p prize_grid_p1">2. nagrada</p>
+            <p class="p prize_grid_p2">600 €</p>
+          </div>
+          <div class="prize_grid_three prize_grid_num fade-up">
+            <p class="p prize_grid_p1">3. nagrada</p>
+            <p class="p prize_grid_p2">400 €</p>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <!-- <div class="paketi_container">
-        <h2 class="paketi">Partnerski paketi</h2>
+      <div class="faq" id="pitanja">
+        <h2 class="h2 faq_title_h2 fade-up">Najčešće postavljana pitanja</h2>
 
-        <div class="paketi_row light">
-            <div class="paketi_grid">
-                <p class="paketi_grid_item upper">Pogodnosti</p>
-                <div>
-                    <p class="paketi_grid_item upper one">Brončani partner</p>
-                    <p class="paketi_grid_item upper two">500 €</p>
-                    <p class="paketi_grid_item upper three">podrška projektu</p>
-                </div>
-                <div>
-                    <p class="paketi_grid_item upper one">Srebrni partner</p>
-                    <p class="paketi_grid_item upper two">1200 €</p>
-                    <p class="paketi_grid_item upper three">partner projekta</p>
-                </div>
-                <div>
-                    <p class="paketi_grid_item upper one">Zlatni partner</p>
-                    <p class="paketi_grid_item upper two">3000 €</p>
-                    <p class="paketi_grid_item upper three">glavni industrijski partner</p>
-                </div>
-            </div>
+        <div class="faq_buttons fade-up">
+          <button class="faq_button selected" data-section="0">Opće</button>
+          <button class="faq_button" data-section="1">Organizacija i logistika</button>
+          <button class="faq_button" data-section="2">Tehnička pitanja</button>
         </div>
 
-        <div class="paketi_row dark">
-            <div class="paketi_grid">
-                <p class="paketi_grid_item left">Logo na službenoj web stranici</p>
-                <img src="/images/check.svg" class="paketi_grid_item inside check">
-                <img src="/images/check.svg" class="paketi_grid_item inside check">
-                <img src="/images/check.svg" class="paketi_grid_item inside check">
-            </div>
+        <div class="faq_questions fade-up" id="faq_questions"></div>
+      </div>
+
+      <div class="team_photo_container">
+        <div class="team_photo_image_container">
+          <img
+            src="/images/team.jpg"
+            alt="Team photo"
+            class="team_photo fade-up"
+          />
+          <div class="team_photo_square one fade-up"></div>
+          <div class="team_photo_square two fade-up"></div>
+          <div class="team_photo_square three fade-up"></div>
+          <div class="team_photo_square four fade-up"></div>
+          <div class="team_photo_square five fade-up"></div>
         </div>
+      </div>
 
-        <div class="paketi_row light">
-            <div class="paketi_grid">
-                <p class="paketi_grid_item left">Logo na banneru događaja</p>
-                <img src="/images/check.svg" class="paketi_grid_item inside check">
-                <img src="/images/check.svg" class="paketi_grid_item inside check">
-                <img src="/images/check.svg" class="paketi_grid_item inside check">
-            </div>
-        </div>
-
-        <div class="paketi_row dark">
-            <div class="paketi_grid">
-                <p class="paketi_grid_item left">Predstavljanje tvrtke na društvenim mrežama projekta</p>
-                <img src="/images/cross.svg" class="paketi_grid_item inside cross">
-                <img src="/images/check.svg" class="paketi_grid_item inside check">
-                <img src="/images/check.svg" class="paketi_grid_item inside check">
-            </div>
-        </div>
-
-        <div class="paketi_row light">
-            <div class="paketi_grid">
-                <p class="paketi_grid_item left">Pristup bazi životopisa članova udruge (primarno studenti FER-a)</p>
-                <img src="/images/cross.svg" class="paketi_grid_item inside cross">
-                <img src="/images/check.svg" class="paketi_grid_item inside check">
-                <img src="/images/check.svg" class="paketi_grid_item inside check">
-            </div>
-        </div>
-
-        <div class="paketi_row dark">
-            <div class="paketi_grid">
-                <p class="paketi_grid_item left">Logo tvrtke na svim promo materijalima</p>
-                <img src="/images/cross.svg" class="paketi_grid_item inside cross">
-                <img src="/images/check.svg" class="paketi_grid_item inside check">
-                <img src="/images/check.svg" class="paketi_grid_item inside check">
-            </div>
-        </div>
-
-        <div class="paketi_row light">
-            <div class="paketi_grid">
-                <p class="paketi_grid_item left">Kratko predstavljanje tvrtke na svečanom otvorenju</p>
-                <img src="/images/cross.svg" class="paketi_grid_item inside cross">
-                <img src="/images/cross.svg" class="paketi_grid_item inside cross">
-                <img src="/images/check.svg" class="paketi_grid_item inside check">
-            </div>
-        </div>
-
-        <div class="paketi_row dark">
-            <div class="paketi_grid">
-                <p class="paketi_grid_item left">Ime tvrtke na pobjedničkom čeku</p>
-                <img src="/images/cross.svg" class="paketi_grid_item inside cross">
-                <img src="/images/cross.svg" class="paketi_grid_item inside cross">
-                <img src="/images/check.svg" class="paketi_grid_item inside check">
-            </div>
-        </div>
-
-        <div class="paketi_row light">
-            <div class="paketi_grid">
-                <p class="paketi_grid_item left">Članstvo u žiriju za ocjenjivanje pobjednika</p>
-                <img src="/images/cross.svg" class="paketi_grid_item inside cross">
-                <img src="/images/cross.svg" class="paketi_grid_item inside cross">
-                <img src="/images/check.svg" class="paketi_grid_item inside check">
-            </div>
-        </div>
-
-        <div class="paketi_row dark">
-            <div class="paketi_grid">
-                <p class="paketi_grid_item left">Promocija među članovima udruge EESTEC LC Zagreb i među sudionicima natjecanja</p>
-                <img src="/images/cross.svg" class="paketi_grid_item inside cross">
-                <img src="/images/cross.svg" class="paketi_grid_item inside cross">
-                <img src="/images/check.svg" class="paketi_grid_item inside check">
-            </div>
-        </div>
-
-        <p class="paketi_footer">*Uz navedene pakete, otvoreni smo i za prilagođene oblike suradnje.</p>
-    </div> -->
-
-    <div class="team_photo_container"><img src="images/team.jpg" alt="Team photo" class="team_photo fade-up"></div>
-
-    <div class="footer">
-        <a href="index.html"><img src="images/codeplay_logo.svg" alt="Logo" class="footer_logo fade-up"></a>
+      <div class="footer">
+        <div class="footer_container">
+        <a href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
+          <img
+            src="/images/codeplay_logo.svg"
+            alt="Logo"
+            class="footer_logo fade-up"
+          />
+        </a>
         <div class="footer_links fade-up">
-            <div class="footer_email_container">
-                <p class="footer_text fade-up">Email</p>
-                <p class="footer_email fade-up">codeplay@eestec.hr</p>
-            </div>
-            <div class="footer_socials">
-                <img src="images/instagram.svg" alt="Instagram" class="footer_instagram fade-up">
-                <img src="images/tiktok.svg" alt="Tiktok" class="footer_tiktok fade-up">
-            </div>
+          <div class="footer_email_container">
+            <p class="p footer_text fade-up">Email</p>
+            <p class="p footer_email fade-up">codeplay@eestec.hr</p>
+          </div>
+          <div class="footer_socials">
+            <a
+              href="https://www.instagram.com/codeplay_zagreb/?utm_source=ig_web_button_share_sheet"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/images/instagram.svg"
+                alt="Instagram"
+                class="footer_instagram fade-up"
+              />
+            </a>
+            <a
+              href="https://www.tiktok.com/@codeplay_zagreb?is_from_webapp=1&sender_device=pc"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/images/tiktok.svg"
+                alt="Tiktok"
+                class="footer_tiktok fade-up"
+              />
+            </a>
+          </div>
         </div>
         <div class="partners fade-up">
-            <a href="https://www.fer.unizg.hr" target="_blank" rel="noopener noreferrer"><img src="images/FER_logo.png" alt="FER" class="partner-logo fer fade-up"></a>
-            <a href="https://eestec.hr/" target="_blank" rel="noopener noreferrer"><img src="images/EESTEC_ZG_logo.svg" alt="EESTEC" class="partner-logo eestec fade-up"></a>
+          <a
+            href="https://www.fer.unizg.hr"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/images/FER_logo.png"
+              alt="FER"
+              class="partner-logo fer fade-up"
+            />
+          </a>
+          <a
+            href="https://eestec.hr/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/images/EESTEC_ZG_logo.svg"
+              alt="EESTEC"
+              class="partner-logo eestec fade-up"
+            />
+          </a>
         </div>
+        </div>
+      </div>
     </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
