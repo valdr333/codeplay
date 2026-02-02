@@ -1,25 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // --- SEO ---
-  const meta = document.createElement("meta");
-  meta.name = "google-site-verification";
-  meta.content = "53Jlvc62kmMSG5GI7ZIjSf7A9RiCoFPlJhpAOzXcrjc";
-  document.head.appendChild(meta);
-
-  document.title = "CODEPLAY Hackathon | EESTEC LC Zagreb";
-
-  const metaDescription = document.createElement("meta");
-  metaDescription.name = "description";
-  metaDescription.content =
-    "CODEPLAY je srednjoškolski hackathon u Zagrebu koji spaja programiranje i elektrotehniku. Prijavi se i sudjeluj!";
-  document.head.appendChild(metaDescription);
-
-  const canonical = document.createElement("link");
-  canonical.rel = "canonical";
-  canonical.href = "https://eestec.hr/codeplay";
-  document.head.appendChild(canonical);
-
   // body background
-  const originalBodyBackground = document.body.style.backgroundColor;
+  // const originalBodyBackground = document.body.style.backgroundColor;
   document.body.style.backgroundColor = "#1A1930";
 
   // Create grid cells
