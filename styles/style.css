@@ -489,7 +489,7 @@ body {
 }
 
 .part {
-  background-image: url("/images/algotrade.jpg");
+  background-image: url("../images/algotrade.jpg");
   background-size: 1000% 100%;
   background-repeat: no-repeat;
   background-position-y: 100%;
@@ -574,7 +574,7 @@ div.traka {
   height: 52px;
   margin: 120px 0;
   border-radius: 4px;
-  background: url("/images/traka.png") repeat-x;
+  background: url("../images/traka.png") repeat-x;
   background-size: auto 100%;
   background-position: 0 0;
   animation: scrollBg 25s linear infinite;
