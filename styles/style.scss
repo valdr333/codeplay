@@ -399,9 +399,9 @@ body {
 
 .sticker.rocket {
     left: 80%;
-    top: 11vw;
-    width: 10%;
-    min-width: 161px;
+    top: 10.5vw;
+    width: 11%;
+    min-width: 170px;
 }
 
 .sticker.heart {
@@ -568,7 +568,7 @@ div.traka {
     background: url("/images/traka.png") repeat-x;
     background-size: auto 100%;
     background-position: 0 0;
-    animation: scrollBg 20s linear infinite;
+    animation: scrollBg 25s linear infinite;
 }
 
 @keyframes scrollBg {
@@ -576,7 +576,7 @@ div.traka {
     background-position-x: 0;
     }
     to {
-    background-position-x: calc(52/512*15150px);
+    background-position-x: calc(52/512*17300px);
     }
 }
 
@@ -1517,8 +1517,8 @@ div.prize_grid {
 
     .sticker.rocket {
         left: 80%;
-        top: 22vw;
-        width: 93px;
+        top: 21.5vw;
+        width: 100px;
         min-width: 0px;
     }
 
@@ -1762,12 +1762,12 @@ div.prize_grid {
         background-size: auto 100%;
         background-position: 0 0;
 
-        animation: scrollBg 20s linear infinite;
+        animation: scrollBg 25s linear infinite;
     }
 
     @keyframes scrollBg {
         from { background-position-x: 0; }
-        to   { background-position-x: calc(36/512*15150px); }
+        to   { background-position-x: calc(36/512*17300px); }
     }
 }
 
@@ -1786,7 +1786,7 @@ div.prize_grid {
         background: url("../images/traka.png") repeat-x;
         background-size: contain;
 
-        animation: scrollBg 14s linear infinite;
+        animation: scrollBg 19s linear infinite;
     }
 
     @keyframes scrollBg {
