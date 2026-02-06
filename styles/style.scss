@@ -576,7 +576,7 @@ div.traka {
     background-position-x: 0;
     }
     to {
-    background-position-x: calc(52/512*17300px);
+    background-position-x: calc(52/208*7000px);
     }
 }
 
@@ -1767,7 +1767,7 @@ div.prize_grid {
 
     @keyframes scrollBg {
         from { background-position-x: 0; }
-        to   { background-position-x: calc(36/512*17300px); }
+        to   { background-position-x: calc(36/208*7000px); }
     }
 }
 
