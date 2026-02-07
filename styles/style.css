@@ -1161,10 +1161,14 @@ div.prize_grid {
   margin: 0 auto;
 }
 
+.footer_logo_link {
+  display: inline-block;
+  margin-bottom: 48px;
+}
+
 .footer_logo {
   width: auto;
   height: 26px;
-  margin-bottom: 48px;
 }
 
 .footer_links {
@@ -1188,6 +1192,12 @@ div.prize_grid {
 .footer_email {
   margin: 0;
   color: #FFFFFF;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer_email:hover {
+  color: #e0e0e0;
 }
 
 .footer_socials {
@@ -1195,9 +1205,21 @@ div.prize_grid {
   width: auto;
 }
 
+.footer_socials a {
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+
+.footer_socials a:hover {
+  opacity: 0.8;
+}
+
+.footer_instagram_link {
+  margin-right: 8px;
+}
+
 .footer_instagram {
   height: 48px;
-  margin-right: 8px;
   cursor: pointer;
 }
 
@@ -1215,11 +1237,22 @@ div.prize_grid {
   padding-top: 24px;
 }
 
+.partners a {
+  transition: opacity 0.3s ease;
+}
+
+.partners a:hover {
+  opacity: 0.8;
+}
+
+.partner_fer_link {
+  margin-right: 54px;
+  margin-top: 15px;
+}
+
 .fer {
   width: auto;
   height: 45px;
-  margin-right: 54px;
-  margin-top: 15px;
 }
 
 .eestec {
@@ -1504,9 +1537,18 @@ div.prize_grid {
     align-self: center;
     bottom: 80px;
   }
+  .header_socials_mobile a {
+    display: inline-block;
+    transition: opacity 0.3s ease;
+  }
+  .header_socials_mobile a:hover {
+    opacity: 0.8;
+  }
+  .header_instagram_link_mobile {
+    margin-right: 8px;
+  }
   .header_instagram {
     height: 48px;
-    margin-right: 8px;
     cursor: pointer;
   }
   .header_tiktok {
