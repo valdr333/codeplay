@@ -569,23 +569,135 @@ body {
   background-size: 1000% 153.85%;
 }
 
+/*
 div.traka {
+    width: 100%;
+    height: 52px;
+    margin: 120px 0;
+    border-radius: 4px;
+    background: url("../images/traka.png") repeat-x;
+    background-size: auto 100%;
+    background-position: 0 0;
+    animation: scrollBg 25s linear infinite;
+}
+
+@keyframes scrollBg {
+    from {
+    background-position-x: 0;
+    }
+    to {
+    background-position-x: calc(52/208*7000px);
+    }
+}
+*/
+.traka-wrapper {
+  position: relative;
+  overflow: hidden;
   width: 100%;
   height: 52px;
   margin: 120px 0;
   border-radius: 4px;
-  background: url("../images/traka.png") repeat-x;
-  background-size: auto 100%;
-  background-position: 0 0;
-  animation: scrollBg 25s linear infinite;
+  background: #C2E64A;
 }
 
-@keyframes scrollBg {
-  from {
-    background-position-x: 0;
+.traka-scroll {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  animation: scroll 50s linear infinite;
+  will-change: transform;
+}
+
+.traka-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding: 0 20px;
+  flex-shrink: 0;
+}
+
+.traka-content a {
+  display: block;
+  flex-shrink: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  transform: translate3d(0, 0, 0);
+}
+
+.traka-content a:hover {
+  transform: scale(1.05);
+}
+
+.traka-content a:focus {
+  outline: 2px solid #333;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.traka-content img {
+  height: 36px;
+  width: auto;
+  display: block;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+.logo-njuskalo img {
+  height: 52px;
+}
+
+.logo-larics img {
+  height: 36px;
+}
+
+.logo-eccos img {
+  height: 36px;
+}
+
+.logo-in2 img {
+  height: 47px;
+}
+
+.logo-mireo img {
+  height: 51px;
+}
+
+.logo-login img {
+  height: 37px;
+}
+
+.logo-positive-equity img {
+  height: 35px;
+}
+
+.logo-tomsoft img {
+  height: 26.8px;
+}
+
+.logo-koncar img {
+  height: 52px;
+}
+
+.logo-t-ht img {
+  height: 52px;
+}
+
+.logo-fer img {
+  height: 52px;
+}
+
+.logo-koios img {
+  height: 52px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(-50%);
   }
-  to {
-    background-position-x: 1750px;
+  100% {
+    transform: translateX(0);
   }
 }
 .project_info_grid {
@@ -1669,23 +1781,109 @@ div.prize_grid {
     width: auto;
     height: 70px;
   }
-  div.traka {
+  /*
+      div.traka {
+          width: 100%;
+          height: 36px;
+          margin: 100px 0;
+          border-radius: 4px;
+          background: url("../images/traka.png") repeat-x;
+          background-size: auto 100%;
+          background-position: 0 0;
+
+          animation: scrollBg 25s linear infinite;
+      }
+
+      @keyframes scrollBg {
+          from { background-position-x: 0; }
+          to   { background-position-x: calc(36/208*7000px); }
+      }
+  */
+  .traka-wrapper {
+    position: relative;
+    overflow: hidden;
     width: 100%;
     height: 36px;
     margin: 100px 0;
     border-radius: 4px;
-    background: url("../images/traka.png") repeat-x;
-    background-size: auto 100%;
-    background-position: 0 0;
-    animation: scrollBg 25s linear infinite;
+    background: #C2E64A;
   }
-  @keyframes scrollBg {
-    from {
-      background-position-x: 0;
-    }
-    to {
-      background-position-x: 1211.5384615385px;
-    }
+  .traka-scroll {
+    display: flex;
+    width: -moz-fit-content;
+    width: fit-content;
+    animation: scroll 50s linear infinite;
+    will-change: transform;
+  }
+  .traka-content {
+    display: flex;
+    gap: 27.38px;
+    padding: 0 15px;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .traka-content a {
+    display: block;
+    flex-shrink: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    -webkit-font-smoothing: antialiased;
+    transform: translate3d(0, 0, 0);
+  }
+  .traka-content a:hover {
+    transform: scale(1.05);
+  }
+  .traka-content a:focus {
+    outline: 2px solid #333;
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+  .traka-content img {
+    height: 26px;
+    width: auto;
+    display: block;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+  .logo-njuskalo img {
+    height: 36px;
+  }
+  .logo-larics img {
+    height: 24.923px;
+  }
+  .logo-eccos img {
+    height: 24.923px;
+  }
+  .logo-in2 img {
+    height: 32.538px;
+  }
+  .logo-mireo img {
+    height: 35.308px;
+  }
+  .logo-login img {
+    height: 25.615px;
+  }
+  .logo-positive-equity img {
+    height: 24.231px;
+  }
+  .logo-tomsoft img {
+    height: 18.554px;
+  }
+  .logo-koncar img {
+    height: 36px;
+  }
+  .logo-t-ht img {
+    height: 36px;
+  }
+  .logo-fer img {
+    height: 36px;
+  }
+  .logo-koios img {
+    height: 36px;
+  }
+  .traka-scroll {
+    animation: scroll 50s linear infinite;
   }
 }
 @media (max-width: 440px) {
@@ -1693,22 +1891,22 @@ div.prize_grid {
     width: 100%;
   }
 }
+/*
 @media (max-width: 370px) {
-  div.traka {
-    width: 100%;
-    height: 52px;
-    margin: 100px 0;
-    border-radius: 4px;
-    background: url("../images/traka.png") repeat-x;
-    background-size: contain;
-    animation: scrollBg 19s linear infinite;
-  }
-  @keyframes scrollBg {
-    from {
-      background-position-x: 0;
+    div.traka {
+        width: 100%;
+        height: 52px;
+        margin: 100px 0;
+        border-radius: 4px;
+        background: url("../images/traka.png") repeat-x;
+        background-size: contain;
+
+        animation: scrollBg 19s linear infinite;
     }
-    to {
-      background-position-x: 370px;
+
+    @keyframes scrollBg {
+        from { background-position-x: 0; }
+        to   { background-position-x: 370px; }
     }
-  }
-}/*# sourceMappingURL=style.css.map */
+}
+*//*# sourceMappingURL=style.css.map */
