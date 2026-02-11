@@ -60,30 +60,30 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // --- FAQ ---
-const faqData = [
-    // Opće
-    [
-      { question: "Što je hackathon i što se tamo radi?", answer: "Hackathon je natjecanje koje traje jedan ili dva dana. Tijekom tog vremena timovi rade na zadatku i natječu se tko će ga najbolje riješiti. Uz znanje, važno je biti snalažljiv i brz, a najbolji timovi osvajaju nagrade. Čak i ako ne pobijedite, uvijek nastane zanimljiv projekt koji svi mogu ponijeti kući i pokazati!" },
-      { question: "Tko se može prijaviti?", answer: "Mogu se prijaviti svi učenici srednjih škola iz Republike Hrvatske." },
-      { question: "Trebam li prethodno znanje iz programiranja ili elektronike?", answer: "Poželjno je da znaš osnove barem jednog programskog jezika, ali sve ostalo će biti objašnjeno i mentorirano tijekom hackathona." },
-      { question: "Mogu li sudjelovati sam/a ili moram biti u timu?", answer: "Možeš se prijaviti isključivo s timom, a tim možeš prijaviti sam ili vas može prijaviti profesor/mentor." },
-      { question: "Koliko sudionika može biti u timu?", answer: "Tim može imati između 4 i 6 članova." },
-      { question: "Mogu li se prijaviti učenici iz drugih gradova ili škola?", answer: "Da! Podržavamo učenike iz cijele Hrvatske da nam se pridruže na FER-u." },
-    ],
-    // Prijava
-    [
-      { question: "Hoće li biti hrane i pića?", answer: "Da, hrana, piće i grickalice bit će besplatni i dostupni tijekom cijelog natjecanja." },
-      { question: "Trebam li ponijeti vlastitu opremu?", answer: "Svu opremu osiguravamo mi, a ako ti je lakše možeš ponijeti vlastiti laptop." },
-      { question: "Hoće li biti mentorstva ili podrške tijekom hackathona?", answer: "Da! Svaki tim će imati mentora, studenta FER-a, koji će vam pomagati i odgovarati na pitanja." },
-    ],
-    // Tehničko
-    [
-      { question: "Koju opremu i softver ću koristiti?", answer: "Radit ćete s mikrokontrolerom ESP-32, u programu Arduino IDE, koristeći programski jezik C/C++." },
-      { question: "Hoću li moći zadržati opremu koju koristim?", answer: "Da, svaki tim nosi doma svu opremu koju koristi tijekom hackathona." },
-      { question: "Hoće li biti Wi-Fi i električnih utičnica?", answer: "Da, sve će biti dostupno na licu mjesta." },
-      { question: "Što ako mi treba pomoć s kodiranjem ili elektronikom?", answer: "Najvažnija je dobra volja i znatiželja - mentori su tu da vam pomognu i odgovore na sva pitanja." },
-    ],
-  ];
+  const faqData = [
+      // Opće
+      [
+        { question: "Što je hackathon i što se tamo radi?", answer: "Hackathon je natjecanje koje traje jedan ili dva dana. Tijekom tog vremena timovi rade na zadatku i natječu se tko će ga najbolje riješiti. Uz znanje, važno je biti snalažljiv i brz, a najbolji timovi osvajaju nagrade. Čak i ako ne pobijedite, uvijek nastane zanimljiv projekt koji svi mogu ponijeti kući i pokazati!" },
+        { question: "Tko se može prijaviti?", answer: "Mogu se prijaviti svi učenici srednjih škola iz Republike Hrvatske." },
+        { question: "Trebam li prethodno znanje iz programiranja ili elektronike?", answer: "Poželjno je da znaš osnove barem jednog programskog jezika, ali sve ostalo će biti objašnjeno i mentorirano tijekom hackathona." },
+        { question: "Mogu li sudjelovati sam/a ili moram biti u timu?", answer: "Možeš se prijaviti isključivo s timom, a tim možeš prijaviti sam ili vas može prijaviti profesor/mentor." },
+        { question: "Koliko sudionika može biti u timu?", answer: "Tim može imati između 4 i 6 članova." },
+        { question: "Mogu li se prijaviti učenici iz drugih gradova ili škola?", answer: "Da! Podržavamo učenike iz cijele Hrvatske da nam se pridruže na FER-u." },
+      ],
+      // Prijava
+      [
+        { question: "Hoće li biti hrane i pića?", answer: "Da, hrana, piće i grickalice bit će besplatni i dostupni tijekom cijelog natjecanja." },
+        { question: "Trebam li ponijeti vlastitu opremu?", answer: "Svu opremu osiguravamo mi, a ako ti je lakše možeš ponijeti vlastiti laptop." },
+        { question: "Hoće li biti mentorstva ili podrške tijekom hackathona?", answer: "Da! Svaki tim će imati mentora, studenta FER-a, koji će vam pomagati i odgovarati na pitanja." },
+      ],
+      // Tehničko
+      [
+        { question: "Koju opremu i softver ću koristiti?", answer: "Radit ćete s mikrokontrolerom ESP-32, u programu Arduino IDE, koristeći programski jezik C/C++." },
+        { question: "Hoću li moći zadržati opremu koju koristim?", answer: "Da, svaki tim nosi doma svu opremu koju koristi tijekom hackathona." },
+        { question: "Hoće li biti Wi-Fi i električnih utičnica?", answer: "Da, sve će biti dostupno na licu mjesta." },
+        { question: "Što ako mi treba pomoć s kodiranjem ili elektronikom?", answer: "Najvažnija je dobra volja i znatiželja - mentori su tu da vam pomognu i odgovore na sva pitanja." },
+      ],
+    ];
 
   let activeSection = 0;
   const buttons = document.querySelectorAll('.faq_button');
@@ -180,4 +180,28 @@ const faqData = [
 
     handleFadeUps();
   }, 50);
+
+  // --- Sponsor strip loading ---
+  const trakaScroll = document.querySelector('.traka-scroll');
+  if (trakaScroll) {
+    const images = trakaScroll.querySelectorAll('img');
+    let loadedCount = 0;
+
+    images.forEach(img => {
+      if (img.complete) {
+        loadedCount++;
+      } else {
+        img.addEventListener('load', () => {
+          loadedCount++;
+          if (loadedCount === images.length) {
+            trakaScroll.classList.add('loaded');
+          }
+        });
+      }
+    });
+
+    if (loadedCount === images.length) {
+      trakaScroll.classList.add('loaded');
+    }
+  }
 });

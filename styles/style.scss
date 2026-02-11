@@ -56,6 +56,15 @@ body {
     max-width: 680px;
 }
 
+.header_text .prijave {
+    margin-top: 12px;
+    line-height: 1.55;
+    max-width: 680px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #C2E64A;
+}
+
 #grid {
     min-width: 370px;
     background-color: #1A1930;
@@ -595,7 +604,17 @@ div.traka {
 .traka-scroll {
     display: flex;
     width: fit-content;
+    // opacity: 0;
+    // animation: scroll 50s linear infinite;
+    // transform: translateZ(0);
+    // will-change: transform;
+}
+
+.traka-scroll.loaded {
     animation: scroll 50s linear infinite;
+    // opacity: 1;
+    // transition: opacity 0.3s;
+    transform: translateZ(0);
     will-change: transform;
 }
 
@@ -1909,6 +1928,9 @@ div.prize_grid {
     .traka-scroll {
         display: flex;
         width: fit-content;
+    }
+
+    .traka-scroll.loaded {
         animation: scroll 50s linear infinite;
         will-change: transform;
     }
@@ -1962,7 +1984,7 @@ div.prize_grid {
     .logo-fer img { height: 36px; }
     .logo-koios img { height: 36px; }
     
-    .traka-scroll {
+    .traka-scroll.loaded {
         animation: scroll 50s linear infinite;
     }
 }
