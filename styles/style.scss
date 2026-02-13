@@ -744,7 +744,7 @@ h2.register {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 28px 20px;
+    padding: 32px 48px;
     box-sizing: border-box;
 }
 
@@ -786,44 +786,106 @@ h2.register {
     justify-content: flex-start;
     gap: 1.5%;
     background-color: rgba(95, 24, 219, 0.8);
-    padding: 30px 30px;
+    padding: 40px 48px;
     border-radius: 8px;
 }
 
 .timetable_text {
-    flex: 0 0 65%;
+    flex: 0 0 55%;
     margin: 0;
 }
 
 .timetable_text_h2 {
     margin: 0;
+    margin-bottom: 48px;
 }
 
-.timetable_list {
-    display: grid;
-    gap: 12px;
+.day-selector {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.day-gap {
+    width: 30px;
+    height: auto;
+    border-bottom: 1px solid #C9CED180;
+}
+
+.day-tab {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    height: auto;
+    width: 195px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1px solid #C9CED180;
+}
+
+.day-text {
     margin: 12px 0;
-}
-
-.timetable_box_title {
-    font-size: 22px;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
     font-weight: 600;
+    line-height: 22px;
+    color: #FFFFFF;
+    transition: color 0.3s ease;
+    display: block;
 }
 
-span.timetable_box_title {
-    color: #CBFD58;
+.day-tab.active {
+    border-bottom: 2px solid #C2E64A;
 }
 
-.timetable_box_ul {
+.day-tab.active .day-text {
+    color: #C2E64A;
+}
+
+.schedule-content {
+    position: relative;
+}
+
+.schedule-day {
+    display: none;
+    // animation: fadeIn 0.4s ease;
+}
+
+.schedule-day.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.schedule-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    align-items: baseline;
+}
+
+.schedule-time {
+    font-family: "Inter", sans-serif;
+    font-style: light;
     font-size: 18px;
-    font-weight: 400;
-    margin: 12px 0 0 0;
-    color: #D1CCF0;
-    padding-inline-start: 20px;
+    color: #FFFFFF;
+    min-width: 120px;
+    font-weight: 300;
 }
 
-.timetable_box_li {
-    margin-bottom: 12px;
+.schedule-activity {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    color: #FFFFFF;
+    font-weight: 600;
 }
 
 .timetable_image_container {
@@ -857,12 +919,12 @@ span.timetable_box_title {
     width: 58px;
     height: 58px;
     top: -20px;
-    left: 20px;
+    left: -30px;
 }
 
 .timetable_square.two {
     top: -20px;
-    left: 90px;
+    left: 40px;
 }
 
 .timetable_square.three {
@@ -1130,6 +1192,52 @@ div.prize_grid {
     height: 87px;
     bottom: -5px;
     left: -10px;
+}
+
+.promo_partners {
+    padding: 0 10.3174603175% 120px 10.3174603175%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.promo_partners_text {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: #F5F3F3;
+}
+
+.promo_partners_logos {
+    margin-top: 54px;
+    display: flex;
+    align-items: flex-start;
+    gap: 38.93px;
+    flex-wrap: wrap;
+}
+
+.promo_partners_logos a {
+    transition: opacity 0.3s ease;
+}
+
+.promo_partners_logos a:hover {
+    opacity: 0.8;
+}
+
+.partner-logo {
+    height: auto;
+    width: auto;
+}
+
+.cg {
+    max-height: 52.1px;
+}
+
+.hrobos {
+    max-height: 87.36px;
+}
+
+.mig-mag {
+    max-height: 72.51px;
 }
 
 .footer {
@@ -1756,12 +1864,23 @@ div.prize_grid {
 
     .timetable_text {
         flex: none;
-        margin-bottom: 40px;
     }
 
-    .timetable_box_title {
-        font-size: 22px;
-        font-weight: 600;
+    .timetable_text_h2 {
+        margin: 0;
+        margin-bottom: 36px;
+    }
+
+    .day-gap {
+        display: none;
+    }
+
+    .day-tab {
+        width: 100%;
+    }
+
+    .schedule-content {
+        margin-bottom: 64px;
     }
 
     .timetable_image_container {
@@ -1875,6 +1994,40 @@ div.prize_grid {
         height: 68px;
         bottom: -30px;
         left: -10px;
+    }
+
+    .promo_partners {
+        padding: 0 18px 100px 18px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .promo_partners_text {
+        display: none;
+    }
+
+    .promo_partners_logos {
+        margin-top: 0;
+        justify-content: center;
+        gap: 11px;
+    }
+
+    .cg {
+        width: 100%;
+        max-width: 167px;
+        height: auto;
+    }
+    
+    .hrobos {
+        width: 100%;
+        max-width: 115px;
+        height: auto;
+    }
+    
+    .mig-mag {
+        width: 100%;
+        max-width: 100px;
+        height: auto;
     }
 
     .footer_container {

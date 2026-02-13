@@ -61,29 +61,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- FAQ ---
   const faqData = [
-      // Opće
-      [
-        { question: "Što je hackathon i što se tamo radi?", answer: "Hackathon je natjecanje koje traje jedan ili dva dana. Tijekom tog vremena timovi rade na zadatku i natječu se tko će ga najbolje riješiti. Uz znanje, važno je biti snalažljiv i brz, a najbolji timovi osvajaju nagrade. Čak i ako ne pobijedite, uvijek nastane zanimljiv projekt koji svi mogu ponijeti kući i pokazati!" },
-        { question: "Tko se može prijaviti?", answer: "Mogu se prijaviti svi učenici srednjih škola iz Republike Hrvatske." },
-        { question: "Trebam li prethodno znanje iz programiranja ili elektronike?", answer: "Poželjno je da znaš osnove barem jednog programskog jezika, ali sve ostalo će biti objašnjeno i mentorirano tijekom hackathona." },
-        { question: "Mogu li sudjelovati sam/a ili moram biti u timu?", answer: "Možeš se prijaviti isključivo s timom, a tim možeš prijaviti sam ili vas može prijaviti profesor/mentor." },
-        { question: "Koliko sudionika može biti u timu?", answer: "Tim može imati između 4 i 6 članova." },
-        { question: "Mogu li se prijaviti učenici iz drugih gradova ili škola?", answer: "Da! Podržavamo učenike iz cijele Hrvatske da nam se pridruže na FER-u." },
-      ],
-      // Prijava
-      [
-        { question: "Hoće li biti hrane i pića?", answer: "Da, hrana, piće i grickalice bit će besplatni i dostupni tijekom cijelog natjecanja." },
-        { question: "Trebam li ponijeti vlastitu opremu?", answer: "Svu opremu osiguravamo mi, a ako ti je lakše možeš ponijeti vlastiti laptop." },
-        { question: "Hoće li biti mentorstva ili podrške tijekom hackathona?", answer: "Da! Svaki tim će imati mentora, studenta FER-a, koji će vam pomagati i odgovarati na pitanja." },
-      ],
-      // Tehničko
-      [
-        { question: "Koju opremu i softver ću koristiti?", answer: "Radit ćete s mikrokontrolerom ESP-32, u programu Arduino IDE, koristeći programski jezik C/C++." },
-        { question: "Hoću li moći zadržati opremu koju koristim?", answer: "Da, svaki tim nosi doma svu opremu koju koristi tijekom hackathona." },
-        { question: "Hoće li biti Wi-Fi i električnih utičnica?", answer: "Da, sve će biti dostupno na licu mjesta." },
-        { question: "Što ako mi treba pomoć s kodiranjem ili elektronikom?", answer: "Najvažnija je dobra volja i znatiželja - mentori su tu da vam pomognu i odgovore na sva pitanja." },
-      ],
-    ];
+    // Opće
+    [
+      { question: "Što je hackathon i što se tamo radi?", answer: "Hackathon je natjecanje koje traje jedan ili dva dana. Tijekom tog vremena timovi rade na zadatku i natječu se tko će ga najbolje riješiti. Uz znanje, važno je biti snalažljiv i brz, a najbolji timovi osvajaju nagrade. Čak i ako ne pobijedite, uvijek nastane zanimljiv projekt koji svi mogu ponijeti kući i pokazati!" },
+      { question: "Tko se može prijaviti?", answer: "Mogu se prijaviti svi učenici srednjih škola iz Republike Hrvatske." },
+      { question: "Trebam li prethodno znanje iz programiranja ili elektronike?", answer: "Poželjno je da znaš osnove barem jednog programskog jezika, ali sve ostalo će biti objašnjeno i mentorirano tijekom hackathona." },
+      { question: "Mogu li sudjelovati sam/a ili moram biti u timu?", answer: "Možeš se prijaviti isključivo s timom, a tim možeš prijaviti sam ili vas može prijaviti profesor/mentor." },
+      { question: "Koliko sudionika može biti u timu?", answer: "Tim može imati između 4 i 6 članova." },
+      { question: "Mogu li se prijaviti učenici iz drugih gradova ili škola?", answer: "Da! Podržavamo učenike iz cijele Hrvatske da nam se pridruže na FER-u. Ukoliko vam je potreban smještaj, uspjeli smo dogovoriti poseban popust u Hotelu Blue za sudionike hackathona. Ako ste zainteresirani, samo nam se javite na mail do 21.2." },
+    ],
+    // Organizacija i logistika
+    [
+      { question: "Hoće li biti hrane i pića?", answer: "Da, hrana, piće i grickalice bit će besplatni i dostupni tijekom cijelog natjecanja." },
+      { question: "Trebam li ponijeti vlastitu opremu?", answer: "Svu opremu osiguravamo mi, a ako ti je lakše možeš ponijeti vlastiti laptop." },
+      { question: "Hoće li biti mentorstva ili podrške tijekom hackathona?", answer: "Da! Svaki tim će imati mentora, studenta FER-a, koji će vam pomagati i odgovarati na pitanja." },
+      { question: "Postoji li mogućnost smještaja za sudionike koji dolaze izvan Zagreba?", answer: "Da. Za sudionike smo osigurali poseban popust u Hotelu Blue. Ako vam je potreban smještaj, javite nam se na mail najkasnije do 21.2. kako bismo vam poslali detalje i upute za rezervaciju." },
+    ],
+    // Tehnička pitanja
+    [
+      { question: "Koju opremu i softver ću koristiti?", answer: "Radit ćete s mikrokontrolerom ESP-32, u programu Arduino IDE, koristeći programski jezik C/C++." },
+      { question: "Hoću li moći zadržati opremu koju koristim?", answer: "Da, svaki tim nosi doma svu opremu koju koristi tijekom hackathona." },
+      { question: "Hoće li biti Wi-Fi i električnih utičnica?", answer: "Da, sve će biti dostupno na licu mjesta." },
+      { question: "Što ako mi treba pomoć s kodiranjem ili elektronikom?", answer: "Najvažnija je dobra volja i znatiželja - mentori su tu da vam pomognu i odgovore na sva pitanja." },
+    ],
+  ];
 
   let activeSection = 0;
   const buttons = document.querySelectorAll('.faq_button');
@@ -204,4 +205,24 @@ document.addEventListener("DOMContentLoaded", () => {
       trakaScroll.classList.add('loaded');
     }
   }
+
+  const dayTabs = document.querySelectorAll('.day-tab');
+  const scheduleDays = document.querySelectorAll('.schedule-day');
+
+  dayTabs.forEach(tab => {
+    tab.addEventListener('click', function() {
+      const selectedDay = this.getAttribute('data-day');
+      
+      dayTabs.forEach(t => t.classList.remove('active'));
+      
+      this.classList.add('active');
+      
+      scheduleDays.forEach(day => day.classList.remove('active'));
+      
+      const targetSchedule = document.getElementById(selectedDay + '-schedule');
+      if (targetSchedule) {
+        targetSchedule.classList.add('active');
+      }
+    });
+  });
 });
