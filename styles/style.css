@@ -47,12 +47,13 @@ body {
 
 .header_text h1 {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   line-height: 1.12;
 }
 
 .header_text p {
   margin-top: 0;
+  margin-bottom: 32px;
   line-height: 1.55;
   max-width: 680px;
 }
@@ -442,7 +443,7 @@ body {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  margin-top: 15px;
+  margin-top: 0;
   margin-right: 12px;
   padding: 12px 16px;
   width: 132px;
@@ -467,7 +468,7 @@ body {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  margin-top: 15px;
+  margin-top: 0;
   padding: 12px 16px;
   width: 145px;
   height: 30px;
