@@ -1213,7 +1213,7 @@ div.prize_grid {
     display: flex;
     align-items: flex-start;
     gap: 38.93px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .promo_partners_logos a {
@@ -1224,9 +1224,15 @@ div.prize_grid {
     opacity: 0.8;
 }
 
+.promo_partner_link {
+    flex: 0 1 auto;
+    min-width: 0;
+}
+
 .partner-logo {
     height: auto;
-    width: auto;
+    width: 100%;
+    object-fit: contain;
 }
 
 .cg {
@@ -1241,7 +1247,12 @@ div.prize_grid {
     max-height: 72.51px;
 }
 
+.dump {
+    max-height: 74px;
+}
+
 .footer {
+    flex: 1 1 0;
     background: #2D205D;
 }
 
@@ -2004,7 +2015,7 @@ div.prize_grid {
     }
 
     .promo_partners_text {
-        display: none;
+        font-size: 16px;
     }
 
     .promo_partners_logos {
@@ -2014,21 +2025,19 @@ div.prize_grid {
     }
 
     .cg {
-        width: 100%;
-        max-width: 167px;
-        height: auto;
+        max-height: 38.91px;
     }
     
     .hrobos {
-        width: 100%;
-        max-width: 115px;
-        height: auto;
+        max-height: 64.31px;
     }
     
     .mig-mag {
-        width: 100%;
-        max-width: 100px;
-        height: auto;
+        max-height: 53.2px;
+    }
+
+    .dump {
+        max-height: 48.49px;
     }
 
     .footer_container {
