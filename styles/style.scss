@@ -1213,7 +1213,7 @@ div.prize_grid {
     display: flex;
     align-items: flex-start;
     gap: 38.93px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .promo_partners_logos a {
@@ -1248,6 +1248,10 @@ div.prize_grid {
 }
 
 .dump {
+    max-height: 74px;
+}
+
+.racunala_hr {
     max-height: 74px;
 }
 
@@ -2025,19 +2029,23 @@ div.prize_grid {
     }
 
     .cg {
-        max-height: 38.91px;
+        max-height: 48.32px;
     }
     
     .hrobos {
-        max-height: 64.31px;
+        max-height: 79.87px;
     }
     
     .mig-mag {
-        max-height: 53.2px;
+        max-height: 66.07px;
     }
 
     .dump {
-        max-height: 48.49px;
+        max-height: 59.63px;
+    }
+
+    .racunala_hr {
+        max-height: 61.1px;
     }
 
     .footer_container {
