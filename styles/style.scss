@@ -338,6 +338,57 @@ body {
     max-width: 1200px;
 }
 
+.countdown_body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+.logo_countdown {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.logo_image_countdown {
+    width: 12vw;
+    min-width: 150px;
+    height: auto;
+}
+
+.event-timer {
+    text-align: center;
+    color: rgb(229,229,225);
+}
+
+#eventCountdown {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(52px, 10vw, 10vw);
+    font-weight: bold;
+    color: #C2E64A;
+    letter-spacing: 2px;
+    overflow: hidden;
+}
+
+.countdown-finished {
+    opacity: 0;
+}
+
+.countdown-finished.show {
+    display: inline-block;
+    opacity: 1;
+    transition: opacity 0.6s ease;
+    animation: pulseScale 1.4s ease-in-out infinite;
+}
+
+@keyframes pulseScale {
+    0%   { transform: translateY(0) scale(1); }
+    50%  { transform: translateY(0) scale(1.08); }
+    100% { transform: translateY(0) scale(1); }
+}
+
 .h1 {
     color: #FFFFFF;
     text-align: left;
@@ -429,10 +480,17 @@ body {
     z-index: 10;
 }
 
+.header_buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
 .register_button {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     text-decoration: none;
     margin-top: 0;
     margin-right: 12px;

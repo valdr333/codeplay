@@ -225,4 +225,38 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // --- EVENT COUNTDOWN ---
+  const countdownEl = document.getElementById("time");
+
+  if (countdownEl) {
+    const eventEnd = new Date("2026-02-28T22:00:00").getTime(); // PROMIJENI DATUM
+
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = eventEnd - now;
+
+      if (distance <= 200) {
+        clearInterval(timer);
+        countdownEl.innerText = "Day 1 Complete ⚡️";
+        // countdownEl.innerText = "Hackathon je završio 🎉";
+        countdownEl.classList.add("countdown-finished");
+
+        setTimeout(() => {
+          countdownEl.classList.add("show");
+        }, 50);
+
+        return;
+      }
+
+      const hours = Math.floor(distance / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownEl.innerText =
+        String(hours).padStart(2, "0") + ":" +
+        String(minutes).padStart(2, "0") + ":" +
+        String(seconds).padStart(2, "0");
+    }, 1000);
+  }
 });
