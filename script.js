@@ -228,6 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- EVENT COUNTDOWN ---
   const countdownEl = document.getElementById("time");
+  const labelEl = document.getElementById("countdownLabel");
 
   if (countdownEl) {
     const eventEnd = new Date("2026-02-28T22:00:00").getTime(); // PROMIJENI DATUM
@@ -238,7 +239,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (distance <= 200) {
         clearInterval(timer);
-        countdownEl.innerText = "Day 1 Complete ⚡️";
+
+          if (labelEl) {
+            labelEl.style.display = "none";
+          }
+
+        countdownEl.innerHTML = "Prvi dan je završen&nbsp;⚡️";
         // countdownEl.innerText = "Hackathon je završio 🎉";
         countdownEl.classList.add("countdown-finished");
 

@@ -358,6 +358,15 @@ body {
   height: auto;
 }
 
+.countdown-label {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(16px, 1.5vw, 1.5vw);
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: rgba(229, 229, 225, 0.7);
+  margin-bottom: 20px;
+}
+
 .event-timer {
   text-align: center;
   color: rgb(229, 229, 225);
@@ -365,7 +374,7 @@ body {
 
 #eventCountdown {
   font-family: "Inter", sans-serif;
-  font-size: clamp(55px, 10vw, 10vw);
+  font-size: clamp(52px, 10vw, 10vw);
   font-weight: bold;
   color: #C2E64A;
   letter-spacing: 2px;
@@ -385,13 +394,13 @@ body {
 
 @keyframes pulseScale {
   0% {
-    transform: translateY(0) scale(1);
+    transform: translateY(0) scale(0.92);
   }
   50% {
-    transform: translateY(0) scale(1.08);
+    transform: translateY(0) scale(1);
   }
   100% {
-    transform: translateY(0) scale(1);
+    transform: translateY(0) scale(0.92);
   }
 }
 .h1 {
@@ -507,7 +516,7 @@ body {
   margin-top: 0;
   margin-right: 12px;
   padding: 12px 16px;
-  width: 132px;
+  width: 152px;
   height: 30px;
   font-size: 18px;
   font-weight: 600;
