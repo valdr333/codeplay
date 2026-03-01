@@ -231,7 +231,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const labelEl = document.getElementById("countdownLabel");
 
   if (countdownEl) {
-    const eventEnd = new Date("2026-02-28T22:00:00").getTime(); // PROMIJENI DATUM
+    const eventEnd = new Date("2026-03-01T11:30:00").getTime(); // PROMIJENI DATUM
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -244,8 +244,8 @@ document.addEventListener("DOMContentLoaded", () => {
             labelEl.style.display = "none";
           }
 
-        countdownEl.innerHTML = "Prvi dan je završen&nbsp;⚡️";
-        // countdownEl.innerText = "Hackathon je završio 🎉";
+        // countdownEl.innerHTML = "Prvi dan je završen&nbsp;⚡️";
+        countdownEl.innerText = "Hackathon je završio 🎉";
         countdownEl.classList.add("countdown-finished");
 
         setTimeout(() => {
