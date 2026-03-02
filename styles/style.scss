@@ -71,7 +71,7 @@ body {
     background-color: #1A1930;
 }
 
-.header_nav_div {
+.header_nav_div, .header_nav_results_div {
     position: fixed;
     top: 0;
     left: 0;
@@ -84,13 +84,13 @@ body {
 }
 
 /* Kad scrollaš: blur + poluprozirna pozadina */
-.header_nav_div.scrolled {
+.header_nav_div.scrolled, .header_nav_results_div.scrolled {
     background-color: rgba(26, 25, 48, 0.8);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
 }
 
-.header_nav_container {
+.header_nav_container, .header_nav_results_container {
     width: 100%;
     height: 80px;
     padding: 0 10.3174603175%;
@@ -100,6 +100,9 @@ body {
     justify-content: space-between;
     z-index: 999;
     margin: 0 auto;
+}
+
+.header_nav_container {
     max-width: calc(1200px + 10.3174603175% * 2);
 }
 
@@ -338,6 +341,9 @@ body {
     max-width: 1200px;
 }
 
+// SUBPAGES
+
+// Countdown page
 .countdown_body {
     display: flex;
     justify-content: center;
@@ -399,6 +405,63 @@ body {
     100% { transform: translateY(0) scale(0.92); }
 }
 
+// Results page
+.scoreboard-container {
+    max-width: 700px;
+    margin: 150px auto 50px auto;
+    padding: 20px;
+    font-family: "Inter", sans-serif;
+}
+
+.scoreboard-title {
+    color: white;
+    margin-bottom: 5vh;
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.scoreboard {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+    background-color: transparent;
+}
+
+.scoreboard td {
+    padding: 20px 24px;
+    font-size: 18px;
+}
+
+.scoreboard thead tr {
+    border-bottom: 1px solid #DAC7FD80;
+}
+
+.scoreboard tbody tr {
+    border-bottom: 1px solid #DAC7FD80;
+}
+
+.scoreboard th {
+    padding: 20px 24px;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.scoreboard th:first-child,
+.scoreboard td:first-child {
+  text-align: left;
+}
+
+.scoreboard td:first-child {
+    opacity: 0.8;
+}
+
+.scoreboard td:last-child {
+  text-align: center;
+  font-weight: 500;
+}
+
 .h1 {
     color: #FFFFFF;
     text-align: left;
@@ -416,7 +479,7 @@ body {
     font-size: 48px;
     font-family: "Inter", sans-serif;
     margin-top: 120px;
-    line-height: 112% ;
+    line-height: 112%;
 }
 
 .h3 {
@@ -1665,11 +1728,11 @@ div.prize_grid {
         transform: translateY(-4.75px) rotate(-45deg);
     }
 
-    .header_nav_div {
+    .header_nav_div, .header_nav_results_div {
         height: 60px;
     }
 
-    .header_nav_container {
+    .header_nav_container, .header_nav_results_container {
         height: 60px;
         padding: 0 18px;
     }
@@ -1846,6 +1909,10 @@ div.prize_grid {
 
     .p {
         font-size: 18px;
+    }
+
+    .scoreboard-title {
+        font-size: 40px;
     }
 
     .sticker.rocket {

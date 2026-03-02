@@ -29,6 +29,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  const headerResults = document.querySelector(".header_nav_results_div");
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    if (scrollY > 0) {
+      headerResults?.classList.add("scrolled");
+    } else {
+      headerResults?.classList.remove("scrolled");
+    }
+  });
+
+  
+
   // Mobile nav toggle
   const mobileButton = document.querySelector('.hamburger_menu');
   const mobileNav = document.querySelector('.header_nav_mobile');
@@ -39,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Smooth scroll for links
-  const scrollLinks = document.querySelectorAll('.header_nav_a, .header_nav_a_mobile, .more_button');
+  const scrollLinks = document.querySelectorAll('.header_nav_a, .header_nav_a_mobile'); //.more_button
   scrollLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
