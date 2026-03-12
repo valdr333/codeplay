@@ -28,27 +28,49 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
         
-        <link rel="stylesheet" href="../styles/style.css?v=20260302a">
+        <link rel="stylesheet" href="../styles/style.css?v=20260312c">
     </head>
 
     <body class="results_body">
-        <div class="header">
-            <div class="header_nav_results_div" id="headerNav">
-                <div class="header_nav_results_container">
-                    <a href="../" target="_blank" rel="noopener noreferrer" class="logo fade-down">
-                        <img
-                        src="../images/codeplay_logo.svg"
-                        alt="Logo"
-                        class="logo_image"
-                        />
-                    </a>
-                </div>
-            </div>
+        <div class="header"> 
+            <div class="header_nav_div" id="headerNav"> 
+                <div class="header_nav_container"> 
+                    <a href="../#" target="_blank" rel="noopener noreferrer" class="logo fade-down"> 
+                        <img src="../images/codeplay_logo.svg" alt="Logo" class="logo_image" /> 
+                    </a> 
+                    <nav class="header_nav desktop fade-down"> 
+                        <a class="header_nav_a fade-down" href="../#raspored" target="_blank" rel="noopener noreferrer">Raspored</a> 
+                        <a class="header_nav_a fade-down" href="../#nagrade" target="_blank" rel="noopener noreferrer">Nagrade</a> 
+                        <a class="header_nav_a fade-down" href="../#pitanja" target="_blank" rel="noopener noreferrer">Pitanja</a> 
+                        <a class="header_nav_a fade-down" href="../gallery/" target="_blank" rel="noopener noreferrer">Galerija</a> 
+                    </nav> 
+                    <div class="hamburger_menu fade-down" id="hamburgerMenu"> 
+                        <span class="bar top"></span> 
+                        <span class="bar bottom"></span> 
+                    </div> 
+                    <nav class="header_nav_mobile"> 
+                        <a class="header_nav_a_mobile" href="../#raspored" target="_blank" rel="noopener noreferrer">Raspored</a> 
+                        <a class="header_nav_a_mobile" href="../#nagrade" target="_blank" rel="noopener noreferrer">Nagrade</a> 
+                        <a class="header_nav_a_mobile" href="../#pitanja" target="_blank" rel="noopener noreferrer">Pitanja</a> 
+                        <a class="header_nav_a_mobile" href="../gallery/" target="_blank" rel="noopener noreferrer">Galerija</a> 
+                        <div class="header_socials_mobile"> 
+                            <a class="header_instagram_link_mobile" href="https://www.instagram.com/codeplay_zagreb/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener noreferrer"> 
+                                <img src="../images/instagram.svg" alt="Instagram" class="header_instagram" /> 
+                            </a> 
+                            <a class="header_tiktok_link_mobile" href="https://www.tiktok.com/@codeplay_zagreb?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer"> 
+                                <img src="../images/tiktok.svg" alt="Tiktok" class="header_tiktok" /> 
+                            </a> 
+                        </div> 
+                    </nav> 
+                </div> 
+            </div> 
+            <div class="grid" id="grid"></div>
+            <div class="header_text"> 
+                <h2 class="scoreboard-title fade-up">Rezultati</h2>
+            </div> 
         </div>
 
         <div class="scoreboard-container">
-            <h2 class="scoreboard-title fade-up">Rezultati</h2>
-
             <table class="scoreboard fade-up">
                 <thead>
                     <tr>
@@ -81,6 +103,76 @@
             </table>
         </div>
 
-        <script src="../script.js?v=20260302a"></script>
+        <div class="footer">
+            <div class="footer_container">
+                <a class="footer_logo_link" href="../#" target="_blank" rel="noopener noreferrer">
+                <img
+                    src="../images/codeplay_logo.svg"
+                    alt="Logo"
+                    class="footer_logo fade-up"
+                />
+                </a>
+                <div class="footer_links fade-up">
+                    <div class="footer_email_container">
+                        <p class="p footer_text fade-up">Email</p>
+                        <a class="p footer_email fade-up" href="mailto:codeplay@eestec.hr">codeplay@eestec.hr</a>
+                    </div>
+                    <div class="footer_socials">
+                        <a
+                        class="footer_instagram_link"
+                        href="https://www.instagram.com/codeplay_zagreb/?utm_source=ig_web_button_share_sheet"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >
+                        <img
+                            src="../images/instagram.svg"
+                            alt="Instagram"
+                            class="footer_instagram fade-up"
+                        />
+                        </a>
+                        <a
+                        class="footer_tiktok_link"
+                        href="https://www.tiktok.com/@codeplay_zagreb?is_from_webapp=1&sender_device=pc"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >
+                        <img
+                            src="../images/tiktok.svg"
+                            alt="Tiktok"
+                            class="footer_tiktok fade-up"
+                        />
+                        </a>
+                    </div>
+                </div>
+                <div class="partners fade-up">
+                    <a
+                        class="partner_fer_link"
+                        href="https://www.fer.unizg.hr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                        src="../images/FER_logo.png"
+                        alt="FER"
+                        class="partner-logo fer fade-up"
+                        />
+                    </a>
+                    <a
+                        class="partner_eestec_link"
+                        href="https://eestec.hr/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                        src="../images/EESTEC_ZG_logo.svg"
+                        alt="EESTEC"
+                        class="partner-logo eestec fade-up"
+                        />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <script src="../script.js?v=20260312a"></script>
     </body>
 </html>

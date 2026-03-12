@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CODEPLAY Hackathon | Gallery</title>
+    <meta name="description" content="Galerija slika s CODEPLAY hackathon-a - najvećeg srednjoškolskog hackathon-a u Hrvatskoj koji potiče stvaranje vlastitih tehnoloških projekata.">
+
+    <meta property="og:title" content="CODEPLAY Hackathon | Gallery">
+    <meta property="og:description" content="Galerija slika s CODEPLAY hackathon-a - najvećeg srednjoškolskog hackathon-a u Hrvatskoj koji potiče stvaranje vlastitih tehnoloških projekata.">
+    <meta property="og:image" content="https://codeplay.hr/images/preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+    <meta property="og:url" content="https://codeplay.hr/gallery/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="hr_HR">
+
+    <link rel="canonical" href="https://codeplay.hr/gallery/">
+        
+    <link rel="icon" type="image/png" sizes="48x48" href="https://codeplay.hr/images/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://codeplay.hr/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://codeplay.hr/images/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="https://codeplay.hr/images/favicon-512x512.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles/style.css?v=20260312c">
+
+    <style>
+        .cell10::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 45%;
+            background: #7D3FE7;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .header_text {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .vidi-sve {
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: underline;
+            transition: opacity 0.2s;
+        }
+
+        .vidi-sve:hover {
+            opacity: 0.75;
+        }
+
+        .gallery-container {
+            padding: 0 6% 100px;
+            max-width: calc(1200px + 10.3174603175% * 2);
+            margin: 0 auto;
+            min-height: 100vh;
+            background-color: #1A1930;
+        }
+
+        .masonry {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            grid-auto-flow: dense;
+        }
+
+        /* Key fix: items are positioned containers with aspect-ratio.
+           Images fill them absolutely — no more JS row-span math needed. */
+        .masonry-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            aspect-ratio: 4 / 3;  /* default cell shape */
+        }
+
+        .masonry-item.span-2 { grid-column: span 2; }
+        .masonry-item.span-3 { grid-column: span 3; aspect-ratio: 16 / 6; }
+        .masonry-item.tall   { grid-row: span 2;    aspect-ratio: 3 / 4; }
+        /* span-2 + tall: 2 cols wide, 2 rows tall — aspect ratio matches 2 normal cells */
+        .masonry-item.span-2.tall { aspect-ratio: 8 / 6; }
+
+        .masonry-item img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .masonry-item:hover img {
+            transform: scale(1.03);
+        }
+
+        .masonry-item .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(125, 63, 231, 0.35);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+        }
+
+        .masonry-item:hover .overlay {
+            opacity: 1;
+        }
+
+        /* LIGHTBOX */
+        .lightbox {
+            font-family: 'Inter', sans-serif;
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 9, 30, 0.95);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .lightbox.open { opacity: 1; pointer-events: all; }
+
+        .lightbox-img {
+            max-width: 80vw;
+            max-height: 88vh;
+            border-radius: 10px;
+            object-fit: contain;
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+        }
+
+        .lightbox.open .lightbox-img { transform: scale(1); }
+
+        .lightbox-close {
+            position: absolute;
+            top: 24px; right: 24px;
+            background: none;
+            border: none;
+            color: #F5F3F3;
+            font-size: 32px;
+            cursor: pointer;
+            line-height: 1;
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .lightbox-close:hover { color: #C2E64A; transform: rotate(90deg); }
+
+        .lightbox-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.08);
+            border: none;
+            color: #F5F3F3;
+            font-size: 24px;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-arrow:hover { background: rgba(194, 230, 74, 0.2); color: #C2E64A; }
+        .lightbox-prev { left: 24px; }
+        .lightbox-next { right: 24px; }
+
+        .lightbox-counter {
+            position: absolute;
+            bottom: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #AFACBF;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
+        .bottom_text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 100px;
+        }
+
+        @media (max-width: 950px) {
+            .masonry {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .masonry-item,
+            .masonry-item.span-2,
+            .masonry-item.span-2.tall,
+            .masonry-item.span-3,
+            .masonry-item.tall {
+                grid-column: unset;
+                grid-row: unset;
+                aspect-ratio: 4 / 3;
+                width: 100%;
+            }
+
+            .gallery-container {
+                padding: 0 18px 100px;
+            }
+
+            .lightbox-arrow {
+                display: none;
+            }
+
+            .lightbox-img {
+                max-width: calc(100vw - 18px);
+            }
+        }
+    </style>
+</head>
+
+<body class="gallery_body">
+    <div class="header"> 
+        <div class="header_nav_div" id="headerNav"> 
+            <div class="header_nav_container"> 
+                <a href="../#" target="_blank" rel="noopener noreferrer" class="logo fade-down"> 
+                    <img src="../images/codeplay_logo.svg" alt="Logo" class="logo_image" /> 
+                </a> 
+                <nav class="header_nav desktop fade-down"> 
+                    <a class="header_nav_a fade-down" href="../#raspored" target="_blank" rel="noopener noreferrer">Raspored</a> 
+                    <a class="header_nav_a fade-down" href="../#nagrade" target="_blank" rel="noopener noreferrer">Nagrade</a> 
+                    <a class="header_nav_a fade-down" href="../#pitanja" target="_blank" rel="noopener noreferrer">Pitanja</a> 
+                    <a class="header_nav_a header_nav_a_js fade-down" href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">Galerija</a> 
+                </nav> 
+                <div class="hamburger_menu fade-down" id="hamburgerMenu"> 
+                    <span class="bar top"></span> 
+                    <span class="bar bottom"></span> 
+                </div> 
+                <nav class="header_nav_mobile"> 
+                    <a class="header_nav_a_mobile" href="../#raspored" target="_blank" rel="noopener noreferrer">Raspored</a> 
+                    <a class="header_nav_a_mobile" href="../#nagrade" target="_blank" rel="noopener noreferrer">Nagrade</a> 
+                    <a class="header_nav_a_mobile" href="../#pitanja" target="_blank" rel="noopener noreferrer">Pitanja</a> 
+                    <a class="header_nav_a_mobile header_nav_a_mobile_js" href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">Galerija</a> 
+                    <div class="header_socials_mobile"> 
+                        <a class="header_instagram_link_mobile" href="https://www.instagram.com/codeplay_zagreb/?utm_source=ig_web_button_share_sheet" target="_blank" rel="noopener noreferrer"> 
+                            <img src="../images/instagram.svg" alt="Instagram" class="header_instagram" /> 
+                        </a> 
+                        <a class="header_tiktok_link_mobile" href="https://www.tiktok.com/@codeplay_zagreb?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer"> 
+                            <img src="../images/tiktok.svg" alt="Tiktok" class="header_tiktok" /> 
+                        </a> 
+                    </div> 
+                </nav> 
+            </div> 
+        </div> 
+        <div class="grid" id="grid"></div>
+        <div class="header_text"> 
+            <h2 class="gallery-title fade-up">Galerija</h2>
+            <a class="vidi-sve fade-up" href="https://drive.google.com/drive/folders/1jcCjOnYbmezwatQseHafFqW2uTGHErzT?usp=sharing" target="_blank" rel="noopener noreferrer">Vidi sve slike</a>
+        </div> 
+    </div>
+    
+    <div class="gallery-container">
+        <div class="masonry" id="gallery">
+            
+            <!-- Rows 1-2: big image spans 2 cols + 2 rows, two images stack in col 3 -->
+            <div class="masonry-item span-2 tall fade-up">
+                <img src="../images/gallery/full/4.jpg" data-full="../images/gallery/full/4.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up" style="grid-column: 3;">
+                <img src="../images/gallery/thumbs/9.jpg" data-full="../images/gallery/full/9.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up" style="grid-column: 3;">
+                <img src="../images/gallery/thumbs/11.jpg" data-full="../images/gallery/full/11.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up">
+                <img src="../images/gallery/thumbs/10.jpg" data-full="../images/gallery/full/10.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up">
+                <img src="../images/gallery/thumbs/16.jpg" data-full="../images/gallery/full/16.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up">
+                <img src="../images/gallery/thumbs/6.jpg" data-full="../images/gallery/full/6.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <!-- Row 3: full-width banner -->
+            <div class="masonry-item span-3 fade-up">
+                <img src="../images/gallery/full/5.jpg" data-full="../images/gallery/full/5.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up">
+                <img src="../images/gallery/thumbs/38.jpg" data-full="../images/gallery/full/38.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up">
+                <img src="../images/gallery/thumbs/3.jpg" data-full="../images/gallery/full/3.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up">
+                <img src="../images/gallery/thumbs/7.jpg" data-full="../images/gallery/full/7.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up">
+                <img src="../images/gallery/thumbs/8.jpg" data-full="../images/gallery/full/8.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up">
+                <img src="../images/gallery/thumbs/12.jpg" data-full="../images/gallery/full/12.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up">
+                <img src="../images/gallery/thumbs/13.jpg" data-full="../images/gallery/full/13.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item span-2 tall fade-up">
+                <img src="../images/gallery/full/15.jpg" data-full="../images/gallery/full/15.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up" style="grid-column: 3;">
+                <img src="../images/gallery/thumbs/14.jpg" data-full="../images/gallery/full/14.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up" style="grid-column: 3;">
+                <img src="../images/gallery/thumbs/17.jpg" data-full="../images/gallery/full/17.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up">
+                <img src="../images/gallery/thumbs/18.jpg" data-full="../images/gallery/full/18.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up">
+                <img src="../images/gallery/thumbs/27.jpg" data-full="../images/gallery/full/27.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up">
+                <img src="../images/gallery/thumbs/20.jpg" data-full="../images/gallery/full/20.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up">
+                <img src="../images/gallery/thumbs/1.jpg" data-full="../images/gallery/full/1.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up">
+                <img src="../images/gallery/thumbs/22.jpg" data-full="../images/gallery/full/22.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up">
+                <img src="../images/gallery/thumbs/23.jpg" data-full="../images/gallery/full/23.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <!-- Rows 2-3: big image spans 2 cols + 2 rows, two images stack in col 1 -->
+            <div class="masonry-item fade-up" style="grid-column: 1;">
+                <img src="../images/gallery/thumbs/25.jpg" data-full="../images/gallery/full/25.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up" style="grid-column: 1;">
+                <img src="../images/gallery/thumbs/34.jpg" data-full="../images/gallery/full/34.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item span-2 tall fade-up" style="grid-column: 2 / span 2;">
+                <img src="../images/gallery/full/19.jpg" data-full="../images/gallery/full/19.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up">
+                <img src="../images/gallery/thumbs/26.jpg" data-full="../images/gallery/full/26.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item span-3 fade-up">
+                <img src="../images/gallery/full/21.jpg" data-full="../images/gallery/full/21.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up">
+                <img src="../images/gallery/thumbs/28.jpg" data-full="../images/gallery/full/28.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up">
+                <img src="../images/gallery/thumbs/29.jpg" data-full="../images/gallery/full/29.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up">
+                <img src="../images/gallery/thumbs/30.jpg" data-full="../images/gallery/full/30.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up">
+                <img src="../images/gallery/thumbs/31.jpg" data-full="../images/gallery/full/31.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up">
+                <img src="../images/gallery/thumbs/32.jpg" data-full="../images/gallery/full/32.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up">
+                <img src="../images/gallery/thumbs/33.jpg" data-full="../images/gallery/full/33.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up">
+                <img src="../images/gallery/thumbs/24.jpg" data-full="../images/gallery/full/24.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item span-3 fade-up">
+                <img src="../images/gallery/full/2.jpg" data-full="../images/gallery/full/2.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up">
+                <img src="../images/gallery/thumbs/35.jpg" data-full="../images/gallery/full/35.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up">
+                <img src="../images/gallery/thumbs/36.jpg" data-full="../images/gallery/full/36.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up">
+                <img src="../images/gallery/thumbs/37.jpg" data-full="../images/gallery/full/37.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+            <div class="masonry-item fade-up">
+                <img src="../images/gallery/thumbs/39.jpg" data-full="../images/gallery/full/39.jpg" loading="lazy" alt="CODEPLAY 2026">
+                <div class="overlay"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose">✕</button>
+        <button class="lightbox-arrow lightbox-prev" id="lightboxPrev">❮</button>
+        <img class="lightbox-img" id="lightboxImg" src="" alt="">
+        <button class="lightbox-arrow lightbox-next" id="lightboxNext">❯</button>
+        <div class="lightbox-counter" id="lightboxCounter"></div>
+    </div>
+
+    <div class="bottom_text"> 
+        <a class="vidi-sve fade-up" href="https://drive.google.com/drive/folders/1jcCjOnYbmezwatQseHafFqW2uTGHErzT?usp=sharing" target="_blank" rel="noopener noreferrer">Vidi sve slike</a>
+    </div> 
+
+    <div class="footer">
+        <div class="footer_container">
+            <a class="footer_logo_link" href="../#" target="_blank" rel="noopener noreferrer">
+            <img
+                src="../images/codeplay_logo.svg"
+                alt="Logo"
+                class="footer_logo fade-up"
+            />
+            </a>
+            <div class="footer_links fade-up">
+                <div class="footer_email_container">
+                    <p class="p footer_text fade-up">Email</p>
+                    <a class="p footer_email fade-up" href="mailto:codeplay@eestec.hr">codeplay@eestec.hr</a>
+                </div>
+                <div class="footer_socials">
+                    <a
+                    class="footer_instagram_link"
+                    href="https://www.instagram.com/codeplay_zagreb/?utm_source=ig_web_button_share_sheet"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                    <img
+                        src="../images/instagram.svg"
+                        alt="Instagram"
+                        class="footer_instagram fade-up"
+                    />
+                    </a>
+                    <a
+                    class="footer_tiktok_link"
+                    href="https://www.tiktok.com/@codeplay_zagreb?is_from_webapp=1&sender_device=pc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                    <img
+                        src="../images/tiktok.svg"
+                        alt="Tiktok"
+                        class="footer_tiktok fade-up"
+                    />
+                    </a>
+                </div>
+            </div>
+            <div class="partners fade-up">
+                <a
+                    class="partner_fer_link"
+                    href="https://www.fer.unizg.hr"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                    src="../images/FER_logo.png"
+                    alt="FER"
+                    class="partner-logo fer fade-up"
+                    />
+                </a>
+                <a
+                    class="partner_eestec_link"
+                    href="https://eestec.hr/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                    src="../images/EESTEC_ZG_logo.svg"
+                    alt="EESTEC"
+                    class="partner-logo eestec fade-up"
+                    />
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const items = document.querySelectorAll(".masonry-item")
+        const lightbox = document.getElementById("lightbox")
+        const lightboxImg = document.getElementById("lightboxImg")
+        const lightboxClose = document.getElementById("lightboxClose")
+        const lightboxPrev = document.getElementById("lightboxPrev")
+        const lightboxNext = document.getElementById("lightboxNext")
+        const lightboxCounter = document.getElementById("lightboxCounter")
+
+        let current = 0
+        const images = Array.from(items).map(item => {
+            const img = item.querySelector("img")
+            return img.dataset.full || img.src
+        })
+
+        function openLightbox(index) {
+            current = index
+            lightboxImg.src = images[current]
+            lightboxCounter.textContent = `${current + 1} / ${images.length}`
+            lightbox.classList.add("open")
+            document.body.style.overflow = "hidden"
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove("open")
+            document.body.style.overflow = ""
+        }
+
+        function prevImage() {
+            current = (current - 1 + images.length) % images.length
+            lightboxImg.src = images[current]
+            lightboxCounter.textContent = `${current + 1} / ${images.length}`
+        }
+
+        function nextImage() {
+            current = (current + 1) % images.length
+            lightboxImg.src = images[current]
+            lightboxCounter.textContent = `${current + 1} / ${images.length}`
+        }
+
+        items.forEach((item, i) => item.addEventListener("click", () => openLightbox(i)))
+        lightboxClose.addEventListener("click", closeLightbox)
+        lightboxPrev.addEventListener("click", prevImage)
+        lightboxNext.addEventListener("click", nextImage)
+        lightbox.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox() })
+
+        document.addEventListener("keydown", (e) => {
+            if (!lightbox.classList.contains("open")) return
+            if (e.key === "Escape") closeLightbox()
+            if (e.key === "ArrowLeft") prevImage()
+            if (e.key === "ArrowRight") nextImage()
+        })
+
+        let touchStartX = 0
+        lightbox.addEventListener("touchstart", (e) => { touchStartX = e.changedTouches[0].screenX }, { passive: true })
+        lightbox.addEventListener("touchend", (e) => {
+            const diff = touchStartX - e.changedTouches[0].screenX
+            if (Math.abs(diff) > 50) { if (diff > 0) nextImage(); else prevImage() }
+        }, { passive: true })
+    </script>
+    <script src="../script.js?v=20260312a"></script>
+</body>
+</html>

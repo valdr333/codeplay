@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Smooth scroll for links
-  const scrollLinks = document.querySelectorAll('.header_nav_a, .header_nav_a_mobile'); //.more_button
+  const scrollLinks = document.querySelectorAll('.header_nav_a_js, .header_nav_a_mobile_js'); //.more_button
   scrollLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
@@ -277,4 +277,115 @@ document.addEventListener("DOMContentLoaded", () => {
         String(seconds).padStart(2, "0");
     }, 1000);
   }
+
+  const slides = document.querySelectorAll(".slide")
+  const dotsContainer = document.querySelector(".dots")
+  const nextBtn = document.querySelector(".arrow_right")
+  const prevBtn = document.querySelector(".arrow_left")
+
+  let current = 0
+  const total = slides.length
+
+  let autoPlay = setInterval(() => {
+    current = (current + 1) % total
+    updateCarousel()
+  }, 6000)
+
+  function resetAutoPlay() {
+    clearInterval(autoPlay)
+    autoPlay = setInterval(() => {
+      current = (current + 1) % total
+      updateCarousel()
+    }, 6000)
+  }
+
+  slides.forEach((_, i) => {
+
+      const dot = document.createElement("span")
+      dot.classList.add("dot")
+
+      if(i === 0) dot.classList.add("active")
+
+      dot.addEventListener("click", () => {
+          current = i
+          updateCarousel()
+          resetAutoPlay()
+      })
+
+      dotsContainer.appendChild(dot)
+  })
+
+  const dots = document.querySelectorAll(".dot")
+
+  function updateCarousel(){
+      slides.forEach((slide, i) => {
+
+          slide.classList.remove(
+              "center",
+              "left",
+              "right",
+              "far-left",
+              "far-right"
+          )
+
+          let offset = (i - current + total) % total
+
+          if(offset === 0) slide.classList.add("center")
+          else if(offset === 1) slide.classList.add("right")
+          else if(offset === 2) slide.classList.add("far-right")
+          else if(offset === total - 1) slide.classList.add("left")
+          else if(offset === total - 2) slide.classList.add("far-left")
+
+      })
+
+      dots.forEach(dot => dot.classList.remove("active"))
+      dots[current].classList.add("active")
+  }
+
+
+  nextBtn.addEventListener("click", () => {
+      current = (current + 1) % total
+      updateCarousel()
+      resetAutoPlay()
+  })
+
+  prevBtn.addEventListener("click", () => {
+      current = (current - 1 + total) % total
+      updateCarousel()
+      resetAutoPlay()
+  })
+
+  updateCarousel()
+
+  const track = document.querySelector(".carousel-track")
+  let touchStartX = 0
+  let hasSwiped = false
+
+  track.addEventListener("touchstart", (e) => {
+    touchStartX = e.changedTouches[0].screenX
+    hasSwiped = false
+    clearInterval(autoPlay)
+  }, { passive: true })
+
+  track.addEventListener("touchmove", (e) => {
+    if (hasSwiped) return
+    
+    const diff = touchStartX - e.changedTouches[0].screenX
+
+    if (Math.abs(diff) > 10) {
+      if (diff > 0) {
+        current = (current + 1) % total
+      } else {
+        current = (current - 1 + total) % total
+      }
+      updateCarousel()
+      resetAutoPlay()
+      hasSwiped = true
+    }
+  }, { passive: true })
+
+  track.addEventListener("touchend", (e) => {
+    touchEndX = e.changedTouches[0].screenX
+    resetAutoPlay()
+  }, { passive: true })
 });

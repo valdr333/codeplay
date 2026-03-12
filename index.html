@@ -30,7 +30,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="styles/style.css?v=20260302a">
+  <link rel="stylesheet" href="styles/style.css?v=20260312c">
 
   <link rel="preload" as="image" href="images/traka_logos/njuskalo.png" fetchpriority="high">
   <link rel="preload" as="image" href="images/traka_logos/larics.png" fetchpriority="high">
@@ -44,6 +44,7 @@
   <link rel="preload" as="image" href="images/traka_logos/t-ht.png" fetchpriority="high">
   <link rel="preload" as="image" href="images/traka_logos/fer.png" fetchpriority="high">
   <link rel="preload" as="image" href="images/traka_logos/koios.png" fetchpriority="high">
+  <link rel="preload" as="image" href="images/codeplay.png" fetchpriority="high">
 </head>
 <body>
   <div class="codeplay-page">
@@ -58,18 +59,20 @@
             />
           </a>
           <nav class="header_nav desktop fade-down">
-            <a class="header_nav_a fade-down" href="#raspored">Raspored</a>
-            <a class="header_nav_a fade-down" href="#nagrade">Nagrade</a>
-            <a class="header_nav_a fade-down" href="#pitanja">Pitanja</a>
+            <a class="header_nav_a header_nav_a_js fade-down" href="#raspored">Raspored</a>
+            <a class="header_nav_a header_nav_a_js fade-down" href="#nagrade">Nagrade</a>
+            <a class="header_nav_a header_nav_a_js fade-down" href="#pitanja">Pitanja</a>
+            <a class="header_nav_a fade-down" href="gallery/" target="_blank" rel="noopener noreferrer">Galerija</a>
           </nav>
           <div class="hamburger_menu fade-down" id="hamburgerMenu">
             <span class="bar top"></span>
             <span class="bar bottom"></span>
           </div>
           <nav class="header_nav_mobile">
-            <a class="header_nav_a_mobile" href="#raspored">Raspored</a>
-            <a class="header_nav_a_mobile" href="#nagrade">Nagrade</a>
-            <a class="header_nav_a_mobile" href="#pitanja">Pitanja</a>
+            <a class="header_nav_a_mobile header_nav_a_mobile_js" href="#raspored">Raspored</a>
+            <a class="header_nav_a_mobile header_nav_a_mobile_js" href="#nagrade">Nagrade</a>
+            <a class="header_nav_a_mobile header_nav_a_mobile_js" href="#pitanja">Pitanja</a>
+            <a class="header_nav_a_mobile" href="gallery/" target="_blank" rel="noopener noreferrer">Galerija</a>
             <div class="header_socials_mobile">
               <a
                 class="header_instagram_link_mobile"
@@ -139,7 +142,7 @@
         </div>
       </div>
 
-      <div class="algotrade_container fade-up">
+      <!-- <div class="algotrade_container fade-up">
         <div class="part part1"></div>
         <div class="part part2"></div>
         <div class="part part3"></div>
@@ -150,6 +153,14 @@
         <div class="part part8"></div>
         <div class="part part9"></div>
         <div class="part part10"></div>
+      </div> -->
+
+      <div class="codeplay_photo_image_container fade-up">
+        <img
+          src="images/codeplay.png"
+          alt="Codeplay photo"
+          class="codeplay_photo fade-up"
+        />
       </div>
 
       <!-- <div class="traka fade-up" id="about"></div> -->
@@ -461,7 +472,7 @@
           </div>
           <div class="timetable_image_container fade-up">
             <img
-              src="images/algotrade_2.jpg"
+              src="images/5.jpg"
               alt="Algotrade 2"
               class="timetable_image algotrade_2 fade-up"
             />
@@ -512,7 +523,7 @@
         <div class="faq_questions fade-up" id="faq_questions"></div>
       </div>
 
-      <div class="team_photo_container">
+      <!-- <div class="team_photo_container">
         <div class="team_photo_image_container">
           <img
             src="images/team.jpg"
@@ -525,6 +536,28 @@
           <div class="team_photo_square four fade-up"></div>
           <div class="team_photo_square five fade-up"></div>
         </div>
+      </div> -->
+      
+      <div class="carousel">
+
+        <a class="carousel_link" href="gallery/" target="_blank" rel="noopener noreferrer">
+          <div class="carousel-track fade-up">
+            <img src="images/1.jpg" class="slide">
+            <img src="images/2.jpg" class="slide">
+            <img src="images/3.jpg" class="slide">
+            <img src="images/4.jpg" class="slide">
+            <img src="images/5.jpg" class="slide">
+          </div>
+        </a>
+
+        <div class="carousel-controls fade-up">
+          <button class="arrow arrow_left">❮</button>
+
+          <div class="dots"></div>
+
+          <button class="arrow arrow_right">❯</button>
+        </div>
+
       </div>
 
       <div class="promo_partners fade-up">
@@ -665,6 +698,6 @@
     </div>
 
   <!-- JavaScript -->
-  <script src="script.js?v=20260302a"></script>
+  <script src="script.js?v=20260312a"></script>
 </body>
 </html>
