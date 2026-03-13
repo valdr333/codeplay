@@ -1,148 +1,300 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>CODEPLAY Hackathon | EESTEC LC Zagreb</title>
+        <title>CODEPLAY Hackathon | EESTEC LC Zagreb</title>
 
-  <meta name="description" content="CODEPLAY je najveći srednjoškolski hackathon u Hrvatskoj koji potiče stvaranje vlastitih tehnoloških projekata. Prijavi se na hackathon koji spaja kreativnost, timski rad i tehnologiju! Nauči kako spojiti kod i elektroniku te razviti vlastiti uređaj uz super ekipu istih interesa.">
+        <meta
+            name="description"
+            content="CODEPLAY je najveći srednjoškolski hackathon u Hrvatskoj koji potiče stvaranje vlastitih tehnoloških projekata. Prijavi se na hackathon koji spaja kreativnost, timski rad i tehnologiju! Nauči kako spojiti kod i elektroniku te razviti vlastiti uređaj uz super ekipu istih interesa."
+        />
 
-  <meta property="og:title" content="CODEPLAY Hackathon | EESTEC LC Zagreb">
-  <meta property="og:description" content="CODEPLAY je najveći srednjoškolski hackathon u Hrvatskoj koji potiče stvaranje vlastitih tehnoloških projekata. Prijavi se na hackathon koji spaja kreativnost, timski rad i tehnologiju! Nauči kako spojiti kod i elektroniku te razviti vlastiti uređaj uz super ekipu istih interesa.">
-  <meta property="og:image" content="https://codeplay.hr/images/preview.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="628">
-  <meta property="og:url" content="https://codeplay.hr/">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="hr_HR">
+        <meta
+            property="og:title"
+            content="CODEPLAY Hackathon | EESTEC LC Zagreb"
+        />
+        <meta
+            property="og:description"
+            content="CODEPLAY je najveći srednjoškolski hackathon u Hrvatskoj koji potiče stvaranje vlastitih tehnoloških projekata. Prijavi se na hackathon koji spaja kreativnost, timski rad i tehnologiju! Nauči kako spojiti kod i elektroniku te razviti vlastiti uređaj uz super ekipu istih interesa."
+        />
+        <meta
+            property="og:image"
+            content="https://codeplay.hr/images/preview.jpg"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="628" />
+        <meta property="og:url" content="https://codeplay.hr/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="hr_HR" />
 
-  <link rel="canonical" href="https://codeplay.hr/">
+        <link rel="canonical" href="https://codeplay.hr/" />
 
-  <link rel="icon" type="image/png" sizes="48x48" href="https://codeplay.hr/images/favicon-48x48.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="https://codeplay.hr/images/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="https://codeplay.hr/images/favicon-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="https://codeplay.hr/images/favicon-512x512.png">
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="48x48"
+            href="https://codeplay.hr/images/favicon-48x48.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="https://codeplay.hr/images/favicon-96x96.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="https://codeplay.hr/images/favicon-192x192.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="512x512"
+            href="https://codeplay.hr/images/favicon-512x512.png"
+        />
 
-  <!-- Inter Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <!-- Inter Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="styles/style.css?v=20260312c">
+        <!-- CSS -->
+        <link rel="stylesheet" href="styles/style.css?v=20260312c" />
 
-  <link rel="preload" as="image" href="images/traka_logos/njuskalo.png" fetchpriority="high">
-  <link rel="preload" as="image" href="images/traka_logos/larics.png" fetchpriority="high">
-  <link rel="preload" as="image" href="images/traka_logos/eccos.png" fetchpriority="high">
-  <link rel="preload" as="image" href="images/traka_logos/in2.png" fetchpriority="high">
-  <link rel="preload" as="image" href="images/traka_logos/mireo.png" fetchpriority="high">
-  <link rel="preload" as="image" href="images/traka_logos/login.png" fetchpriority="high">
-  <link rel="preload" as="image" href="images/traka_logos/positive-equity.png" fetchpriority="high">
-  <link rel="preload" as="image" href="images/traka_logos/tomsoft.png" fetchpriority="high">
-  <link rel="preload" as="image" href="images/traka_logos/koncar.png" fetchpriority="high">
-  <link rel="preload" as="image" href="images/traka_logos/t-ht.png" fetchpriority="high">
-  <link rel="preload" as="image" href="images/traka_logos/fer.png" fetchpriority="high">
-  <link rel="preload" as="image" href="images/traka_logos/koios.png" fetchpriority="high">
-  <link rel="preload" as="image" href="images/codeplay.png" fetchpriority="high">
-</head>
-<body>
-  <div class="codeplay-page">
-      <div class="header">
-        <div class="header_nav_div" id="headerNav">
-          <div class="header_nav_container">
-          <a href="#" onclick="location.reload();" class="logo fade-down">
-            <img
-              src="images/codeplay_logo.svg"
-              alt="Logo"
-              class="logo_image"
-            />
-          </a>
-          <nav class="header_nav desktop fade-down">
-            <a class="header_nav_a header_nav_a_js fade-down" href="#raspored">Raspored</a>
-            <a class="header_nav_a header_nav_a_js fade-down" href="#nagrade">Nagrade</a>
-            <a class="header_nav_a header_nav_a_js fade-down" href="#pitanja">Pitanja</a>
-            <a class="header_nav_a fade-down" href="gallery/" target="_blank" rel="noopener noreferrer">Galerija</a>
-          </nav>
-          <div class="hamburger_menu fade-down" id="hamburgerMenu">
-            <span class="bar top"></span>
-            <span class="bar bottom"></span>
-          </div>
-          <nav class="header_nav_mobile">
-            <a class="header_nav_a_mobile header_nav_a_mobile_js" href="#raspored">Raspored</a>
-            <a class="header_nav_a_mobile header_nav_a_mobile_js" href="#nagrade">Nagrade</a>
-            <a class="header_nav_a_mobile header_nav_a_mobile_js" href="#pitanja">Pitanja</a>
-            <a class="header_nav_a_mobile" href="gallery/" target="_blank" rel="noopener noreferrer">Galerija</a>
-            <div class="header_socials_mobile">
-              <a
-                class="header_instagram_link_mobile"
-                href="https://www.instagram.com/codeplay_zagreb/?utm_source=ig_web_button_share_sheet"
-                target="_blank"
-                rel="noopener noreferrer"
-                >
-                <img
-                  src="images/instagram.svg"
-                  alt="Instagram"
-                  class="header_instagram"
-                  />
-              </a>
-              <a
-                class="header_tiktok_link_mobile"
-                href="https://www.tiktok.com/@codeplay_zagreb?is_from_webapp=1&sender_device=pc"
-                target="_blank"
-                rel="noopener noreferrer"
-                >
-                <img
-                  src="images/tiktok.svg"
-                  alt="Tiktok"
-                  class="header_tiktok"
-                  />
-              </a>
+        <link
+            rel="preload"
+            as="image"
+            href="images/traka_logos/njuskalo.png"
+            fetchpriority="high"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="images/traka_logos/larics.png"
+            fetchpriority="high"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="images/traka_logos/eccos.png"
+            fetchpriority="high"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="images/traka_logos/in2.png"
+            fetchpriority="high"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="images/traka_logos/mireo.png"
+            fetchpriority="high"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="images/traka_logos/login.png"
+            fetchpriority="high"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="images/traka_logos/positive-equity.png"
+            fetchpriority="high"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="images/traka_logos/tomsoft.png"
+            fetchpriority="high"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="images/traka_logos/koncar.png"
+            fetchpriority="high"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="images/traka_logos/t-ht.png"
+            fetchpriority="high"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="images/traka_logos/fer.png"
+            fetchpriority="high"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="images/traka_logos/koios.png"
+            fetchpriority="high"
+        />
+        <link
+            rel="preload"
+            as="image"
+            href="images/codeplay.png"
+            fetchpriority="high"
+        />
+    </head>
+
+    <body>
+        <div class="codeplay-page">
+            <div class="header">
+                <div class="header_nav_div" id="headerNav">
+                    <div class="header_nav_container">
+                        <a
+                            href="#"
+                            onclick="location.reload()"
+                            class="logo fade-down"
+                        >
+                            <img
+                                src="images/codeplay_logo.svg"
+                                alt="Logo"
+                                class="logo_image"
+                            />
+                        </a>
+                        <nav class="header_nav desktop fade-down">
+                            <a
+                                class="header_nav_a header_nav_a_js fade-down"
+                                href="#raspored"
+                                >Raspored</a
+                            >
+                            <a
+                                class="header_nav_a header_nav_a_js fade-down"
+                                href="#nagrade"
+                                >Nagrade</a
+                            >
+                            <a
+                                class="header_nav_a header_nav_a_js fade-down"
+                                href="#pitanja"
+                                >Pitanja</a
+                            >
+                            <a
+                                class="header_nav_a fade-down"
+                                href="gallery/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Galerija</a
+                            >
+                        </nav>
+                        <div
+                            class="hamburger_menu fade-down"
+                            id="hamburgerMenu"
+                        >
+                            <span class="bar top"></span>
+                            <span class="bar bottom"></span>
+                        </div>
+                        <nav class="header_nav_mobile">
+                            <a
+                                class="header_nav_a_mobile header_nav_a_mobile_js"
+                                href="#raspored"
+                                >Raspored</a
+                            >
+                            <a
+                                class="header_nav_a_mobile header_nav_a_mobile_js"
+                                href="#nagrade"
+                                >Nagrade</a
+                            >
+                            <a
+                                class="header_nav_a_mobile header_nav_a_mobile_js"
+                                href="#pitanja"
+                                >Pitanja</a
+                            >
+                            <a
+                                class="header_nav_a_mobile"
+                                href="gallery/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                >Galerija</a
+                            >
+                            <div class="header_socials_mobile">
+                                <a
+                                    class="header_instagram_link_mobile"
+                                    href="https://www.instagram.com/codeplay_zagreb/?utm_source=ig_web_button_share_sheet"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <img
+                                        src="images/instagram.svg"
+                                        alt="Instagram"
+                                        class="header_instagram"
+                                    />
+                                </a>
+                                <a
+                                    class="header_tiktok_link_mobile"
+                                    href="https://www.tiktok.com/@codeplay_zagreb?is_from_webapp=1&sender_device=pc"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <img
+                                        src="images/tiktok.svg"
+                                        alt="Tiktok"
+                                        class="header_tiktok"
+                                    />
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="grid" id="grid"></div>
+                <div class="header_text">
+                    <img
+                        src="images/sticker_rocket.svg"
+                        class="sticker rocket fade-down"
+                    />
+                    <img
+                        src="images/sticker_heart.svg"
+                        class="sticker heart fade-down"
+                    />
+                    <img
+                        src="images/sticker_play.svg"
+                        class="sticker play fade-down"
+                    />
+                    <h1 class="h1 fade-down">
+                        Srednjoškolsko natjecanje koje&nbsp;potiče stvaranje
+                        vlastitih tehnoloških projekata
+                    </h1>
+                    <p class="p fade-down">
+                        Prijavi se na hackathon koji spaja kreativnost, timski
+                        rad i tehnologiju! Nauči kako spojiti kod i elektroniku
+                        te razviti vlastiti uređaj uz super ekipu istih
+                        interesa.
+                    </p>
+                    <div class="header_buttons">
+                        <a
+                            href="docs/zadatak.zip"
+                            download
+                            class="register_button fade-down"
+                        >
+                            Preuzmi zadatak!
+                            <!-- Prijavi se! -->
+                        </a>
+                        <a
+                            class="more_button fade-down"
+                            href="results/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <!-- href="#about" -->
+                            Vidi rezultate!
+                            <!-- Saznaj više - edit i .js .more_button-->
+                        </a>
+                    </div>
+                    <!-- <p class="p prijave fade-down">Prijave traju do 24.2. do kraja dana.</p> -->
+                </div>
             </div>
-          </nav>
-          </div>
-        </div>
-        <div class="grid" id="grid"></div>
-        <div class="header_text">
-          <img
-              src="images/sticker_rocket.svg"
-              class="sticker rocket fade-down"
-            />
-          <img
-              src="images/sticker_heart.svg"
-              class="sticker heart fade-down"
-            />
-          <img
-              src="images/sticker_play.svg"
-              class="sticker play fade-down"
-            />
-          <h1 class="h1 fade-down">
-            Srednjoškolsko natjecanje koje&nbsp;potiče stvaranje vlastitih tehnoloških projekata
-          </h1>
-          <p class="p fade-down">
-            Prijavi se na hackathon koji spaja kreativnost, timski rad i tehnologiju! Nauči kako spojiti kod i elektroniku te razviti vlastiti uređaj uz super ekipu istih interesa.
-          </p>
-          <div class="header_buttons">
-            <a
-              href="docs/zadatak.zip" download class="register_button fade-down"
-            >
-              Preuzmi zadatak!  <!-- Prijavi se! -->
-            </a>
-            <a
-              class="more_button fade-down"
-              href="results/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <!-- href="#about" -->
-              Vidi rezultate! <!-- Saznaj više - edit i .js .more_button-->
-            </a>
-          </div>
-          <!-- <p class="p prijave fade-down">Prijave traju do 24.2. do kraja dana.</p> -->
-        </div>
-      </div>
 
-      <!-- <div class="algotrade_container fade-up">
+            <!-- <div class="algotrade_container fade-up">
         <div class="part part1"></div>
         <div class="part part2"></div>
         <div class="part part3"></div>
@@ -155,375 +307,773 @@
         <div class="part part10"></div>
       </div> -->
 
-      <div class="codeplay_photo_image_container fade-up">
-        <img
-          src="images/codeplay.png"
-          alt="Codeplay photo"
-          class="codeplay_photo fade-up"
-        />
-      </div>
-
-      <!-- <div class="traka fade-up" id="about"></div> -->
-
-      <div class="traka-wrapper fade-up" id="about">
-        <div class="traka-scroll">
-          <div class="traka-content">
-            <a href="https://www.njuskalo.hr" target="_blank" rel="noopener noreferrer" class="logo-njuskalo">
-              <img src="images/traka_logos/njuskalo.png" alt="Njuškalo">
-            </a>
-            <a href="https://larics.fer.hr" target="_blank" rel="noopener noreferrer" class="logo-larics">
-              <img src="images/traka_logos/larics.png" alt="LARICS">
-            </a>
-            <a href="https://www.eccos.hr" target="_blank" rel="noopener noreferrer" class="logo-eccos">
-              <img src="images/traka_logos/eccos.png" alt="ECCOS">
-            </a>
-            <a href="https://in2.eu" target="_blank" rel="noopener noreferrer" class="logo-in2">
-              <img src="images/traka_logos/in2.png" alt="IN2">
-            </a>
-            <a href="https://www.mireo.com" target="_blank" rel="noopener noreferrer" class="logo-mireo">
-              <img src="images/traka_logos/mireo.png" alt="Mireo">
-            </a>
-            <a href="https://login.hr" target="_blank" rel="noopener noreferrer" class="logo-login">
-              <img src="images/traka_logos/login.png" alt="Login">
-            </a>
-            <a href="https://positive.ie" target="_blank" rel="noopener noreferrer" class="logo-positive-equity">
-              <img src="images/traka_logos/positive-equity.png" alt="Positive Equity">
-            </a>
-            <a href="https://www.tomsoft.hr" target="_blank" rel="noopener noreferrer" class="logo-tomsoft">
-              <img src="images/traka_logos/tomsoft.png" alt="Tomsoft">
-            </a>
-            <a href="https://www.koncar.hr/hr" target="_blank" rel="noopener noreferrer" class="logo-koncar">
-              <img src="images/traka_logos/koncar.png" alt="Končar">
-            </a>
-            <a href="https://www.t.ht.hr" target="_blank" rel="noopener noreferrer" class="logo-t-ht">
-              <img src="images/traka_logos/t-ht.png" alt="T-HT">
-            </a>
-            <a href="https://www.fer.unizg.hr" target="_blank" rel="noopener noreferrer" class="logo-fer">
-              <img src="images/traka_logos/fer.png" alt="FER">
-            </a>
-            <a href="https://koios.hr/hr/" target="_blank" rel="noopener noreferrer" class="logo-koios">
-              <img src="images/traka_logos/koios.png" alt="KOIOS">
-            </a>
-          </div>
-            
-          <div class="traka-content" aria-hidden="true">
-            <a href="https://www.njuskalo.hr" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-njuskalo">
-              <img src="images/traka_logos/njuskalo.png" alt="">
-            </a>
-            <a href="https://larics.fer.hr" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-larics">
-              <img src="images/traka_logos/larics.png" alt="">
-            </a>
-            <a href="https://www.eccos.hr" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-eccos">
-              <img src="images/traka_logos/eccos.png" alt="">
-            </a>
-            <a href="https://in2.eu" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-in2">
-              <img src="images/traka_logos/in2.png" alt="">
-            </a>
-            <a href="https://www.mireo.com" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-mireo">
-              <img src="images/traka_logos/mireo.png" alt="">
-            </a>
-            <a href="https://login.hr" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-login">
-              <img src="images/traka_logos/login.png" alt="">
-            </a>
-            <a href="https://positive.ie" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-positive-equity">
-              <img src="images/traka_logos/positive-equity.png" alt="">
-            </a>
-            <a href="https://www.tomsoft.hr" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-tomsoft">
-              <img src="images/traka_logos/tomsoft.png" alt="">
-            </a>
-            <a href="https://www.koncar.hr/hr" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-koncar">
-              <img src="images/traka_logos/koncar.png" alt="">
-            </a>
-            <a href="https://www.t.ht.hr" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-t-ht">
-              <img src="images/traka_logos/t-ht.png" alt="">
-            </a>
-            <a href="https://www.fer.unizg.hr" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-fer">
-              <img src="images/traka_logos/fer.png" alt="">
-            </a>
-            <a href="https://koios.hr/hr/" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-koios">
-              <img src="images/traka_logos/koios.png" alt="">
-            </a>
-          </div>
-
-          <div class="traka-content" aria-hidden="true">
-            <a href="https://www.njuskalo.hr" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-njuskalo">
-              <img src="images/traka_logos/njuskalo.png" alt="">
-            </a>
-            <a href="https://larics.fer.hr" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-larics">
-              <img src="images/traka_logos/larics.png" alt="">
-            </a>
-            <a href="https://www.eccos.hr" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-eccos">
-              <img src="images/traka_logos/eccos.png" alt="">
-            </a>
-            <a href="https://in2.eu" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-in2">
-              <img src="images/traka_logos/in2.png" alt="">
-            </a>
-            <a href="https://www.mireo.com" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-mireo">
-              <img src="images/traka_logos/mireo.png" alt="">
-            </a>
-            <a href="https://login.hr" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-login">
-              <img src="images/traka_logos/login.png" alt="">
-            </a>
-            <a href="https://positive.ie" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-positive-equity">
-              <img src="images/traka_logos/positive-equity.png" alt="">
-            </a>
-            <a href="https://www.tomsoft.hr" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-tomsoft">
-              <img src="images/traka_logos/tomsoft.png" alt="">
-            </a>
-            <a href="https://www.koncar.hr/hr" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-koncar">
-              <img src="images/traka_logos/koncar.png" alt="">
-            </a>
-            <a href="https://www.t.ht.hr" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-t-ht">
-              <img src="images/traka_logos/t-ht.png" alt="">
-            </a>
-            <a href="https://www.fer.unizg.hr" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-fer">
-              <img src="images/traka_logos/fer.png" alt="">
-            </a>
-            <a href="https://koios.hr/hr/" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-koios">
-              <img src="images/traka_logos/koios.png" alt="">
-            </a>
-          </div>
-
-          <div class="traka-content" aria-hidden="true">
-            <a href="https://www.njuskalo.hr" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-njuskalo">
-              <img src="images/traka_logos/njuskalo.png" alt="">
-            </a>
-            <a href="https://larics.fer.hr" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-larics">
-              <img src="images/traka_logos/larics.png" alt="">
-            </a>
-            <a href="https://www.eccos.hr" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-eccos">
-              <img src="images/traka_logos/eccos.png" alt="">
-            </a>
-            <a href="https://in2.eu" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-in2">
-              <img src="images/traka_logos/in2.png" alt="">
-            </a>
-            <a href="https://www.mireo.com" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-mireo">
-              <img src="images/traka_logos/mireo.png" alt="">
-            </a>
-            <a href="https://login.hr" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-login">
-              <img src="images/traka_logos/login.png" alt="">
-            </a>
-            <a href="https://positive.ie" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-positive-equity">
-              <img src="images/traka_logos/positive-equity.png" alt="">
-            </a>
-            <a href="https://www.tomsoft.hr" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-tomsoft">
-              <img src="images/traka_logos/tomsoft.png" alt="">
-            </a>
-            <a href="https://www.koncar.hr/hr" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-koncar">
-              <img src="images/traka_logos/koncar.png" alt="">
-            </a>
-            <a href="https://www.t.ht.hr" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-t-ht">
-              <img src="images/traka_logos/t-ht.png" alt="">
-            </a>
-            <a href="https://www.fer.unizg.hr" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-fer">
-              <img src="images/traka_logos/fer.png" alt="">
-            </a>
-            <a href="https://koios.hr/hr/" target="_blank" rel="noopener noreferrer" tabindex="-1" class="logo-koios">
-              <img src="images/traka_logos/koios.png" alt="">
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project_info_grid">
-        <p class="p project_info_grid_row datum fade-up">
-          28. 2. – 1. 3. 2026.
-        </p>
-        <p class="p project_info_grid_row mjesto fade-up">FER, Zagreb</p>
-        <div class="project_info_grid_row container">
-          <p class="p project_info_grid_row container fade-up">20 timova</p>
-          <p class="p project_info_grid_row container fade-up">100 sudionika</p>
-          <p class="p project_info_grid_row container fade-up">20 mentora</p>
-        </div>
-      </div>
-
-      <div class="register">
-        <h2 class="h2 register fade-up">Zašto&nbsp;se&nbsp;prijaviti?</h2>
-        <div class="register_grid">
-          <div class="register_item fade-up">
-            <img
-              src="images/rocket.svg"
-              alt="Rocket"
-              class="register_image fade-up"
-            />
-            <div class="register_p fade-up">
-              <p class="p register_p1">Hands-on izazov</p>
-              <p class="p register_p2">
-                Isprobat ćeš pravi inženjerski izazov u opuštenoj, ali
-                natjecateljskoj atosmferi.
-              </p>
-            </div>
-          </div>
-          <div class="register_item fade-up">
-            <img
-              src="images/hat.svg"
-              alt="Hat"
-              class="register_image fade-up"
-            />
-            <div class="register_p fade-up">
-              <p class="p register_p1">Praktično znanje</p>
-              <p class="p register_p2">
-                Naučit ćeš kako spojiti kod i elektroniku u funkcionalan
-                projekt.
-              </p>
-            </div>
-          </div>
-          <div class="register_item fade-up">
-            <img
-              src="images/message.svg"
-              alt="Message"
-              class="register_image fade-up"
-            />
-            <div class="register_p fade-up">
-              <p class="p register_p1">Networking</p>
-              <p class="p register_p2">
-                Upoznat ćeš studente FER-a koji su već prošli ono što tebe
-                čeka.
-              </p>
-            </div>
-          </div>
-          <div class="register_item fade-up">
-            <img
-              src="images/heart.svg"
-              alt="Heart"
-              class="register_image fade-up"
-            />
-            <div class="register_p fade-up">
-              <p class="p register_p1">Puno zabave</p>
-              <p class="p register_p2">
-                Odlična atmosfera, novi prijatelji, nagrade i puno zabave.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="timetable_container fade-up" id="raspored">
-        <div class="timetable">
-          <div class="timetable_text">
-            <h2 class="h2 timetable_text_h2 fade-up">Raspored</h2>
-            <div class="day-selector">
-              <div class="day-tab active fade-up" data-day="saturday">
-                <span class="day-text fade-up">Subota 28. 2.</span>
-              </div>
-              <div class="day-gap fade-up"></div>
-              <div class="day-tab fade-up" data-day="sunday">
-                <span class="day-text fade-up">Nedjelja 1. 3.</span>
-              </div>
+            <div class="codeplay_photo_image_container fade-up">
+                <img
+                    src="images/codeplay.png"
+                    alt="Codeplay photo"
+                    class="codeplay_photo fade-up"
+                />
             </div>
 
-            <div class="schedule-content">
-              <!-- Saturday Schedule -->
-              <div class="schedule-day active" id="saturday-schedule">
-                <div class="schedule-item fade-up">
-                  <span class="schedule-time">08.30 - 09.30</span>
-                  <span class="schedule-activity">registracija i doručak</span>
-                </div>
-                <div class="schedule-item fade-up">
-                  <span class="schedule-time">09.30 - 10.00</span>
-                  <span class="schedule-activity">otvorenje i početak hackathona</span>
-                </div>
-                <div class="schedule-item fade-up">
-                  <span class="schedule-time">13.00 - 15.00</span>
-                  <span class="schedule-activity">ručak</span>
-                </div>
-                <div class="schedule-item fade-up">
-                  <span class="schedule-time">15.00 - 18.30</span>
-                  <span class="schedule-activity">nastavak rada</span>
-                </div>
-                <div class="schedule-item fade-up">
-                  <span class="schedule-time">18.00 - 18.30</span>
-                  <span class="schedule-activity">nagradni kviz</span>
-                </div>
-                <div class="schedule-item fade-up">
-                  <span class="schedule-time">18.30 - 19.00</span>
-                  <span class="schedule-activity">večera</span>
-                </div>
-                <div class="schedule-item fade-up">
-                  <span class="schedule-time">19.00 - 22.00</span>
-                  <span class="schedule-activity">nastavak rada</span>
-                </div>
-                <div class="schedule-item fade-up">
-                  <span class="schedule-time">22.00</span>
-                  <span class="schedule-activity">zatvaranje učionica</span>
-                </div>
-              </div>
+            <!-- <div class="traka fade-up" id="about"></div> -->
 
-              <!-- Sunday Schedule -->
-              <div class="schedule-day" id="sunday-schedule">
-                <div class="schedule-item fade-up">
-                  <span class="schedule-time">08.30 - 09.00</span>
-                  <span class="schedule-activity">doručak i okupljanje</span>
+            <div class="traka-wrapper fade-up" id="about">
+                <div class="traka-scroll">
+                    <div class="traka-content">
+                        <a
+                            href="https://www.njuskalo.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="logo-njuskalo"
+                        >
+                            <img
+                                src="images/traka_logos/njuskalo.png"
+                                alt="Njuškalo"
+                            />
+                        </a>
+                        <a
+                            href="https://larics.fer.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="logo-larics"
+                        >
+                            <img
+                                src="images/traka_logos/larics.png"
+                                alt="LARICS"
+                            />
+                        </a>
+                        <a
+                            href="https://www.eccos.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="logo-eccos"
+                        >
+                            <img
+                                src="images/traka_logos/eccos.png"
+                                alt="ECCOS"
+                            />
+                        </a>
+                        <a
+                            href="https://in2.eu"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="logo-in2"
+                        >
+                            <img src="images/traka_logos/in2.png" alt="IN2" />
+                        </a>
+                        <a
+                            href="https://www.mireo.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="logo-mireo"
+                        >
+                            <img
+                                src="images/traka_logos/mireo.png"
+                                alt="Mireo"
+                            />
+                        </a>
+                        <a
+                            href="https://login.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="logo-login"
+                        >
+                            <img
+                                src="images/traka_logos/login.png"
+                                alt="Login"
+                            />
+                        </a>
+                        <a
+                            href="https://positive.ie"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="logo-positive-equity"
+                        >
+                            <img
+                                src="images/traka_logos/positive-equity.png"
+                                alt="Positive Equity"
+                            />
+                        </a>
+                        <a
+                            href="https://www.tomsoft.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="logo-tomsoft"
+                        >
+                            <img
+                                src="images/traka_logos/tomsoft.png"
+                                alt="Tomsoft"
+                            />
+                        </a>
+                        <a
+                            href="https://www.koncar.hr/hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="logo-koncar"
+                        >
+                            <img
+                                src="images/traka_logos/koncar.png"
+                                alt="Končar"
+                            />
+                        </a>
+                        <a
+                            href="https://www.t.ht.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="logo-t-ht"
+                        >
+                            <img src="images/traka_logos/t-ht.png" alt="T-HT" />
+                        </a>
+                        <a
+                            href="https://www.fer.unizg.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="logo-fer"
+                        >
+                            <img src="images/traka_logos/fer.png" alt="FER" />
+                        </a>
+                        <a
+                            href="https://koios.hr/hr/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="logo-koios"
+                        >
+                            <img
+                                src="images/traka_logos/koios.png"
+                                alt="KOIOS"
+                            />
+                        </a>
+                    </div>
+
+                    <div class="traka-content" aria-hidden="true">
+                        <a
+                            href="https://www.njuskalo.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-njuskalo"
+                        >
+                            <img src="images/traka_logos/njuskalo.png" alt="" />
+                        </a>
+                        <a
+                            href="https://larics.fer.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-larics"
+                        >
+                            <img src="images/traka_logos/larics.png" alt="" />
+                        </a>
+                        <a
+                            href="https://www.eccos.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-eccos"
+                        >
+                            <img src="images/traka_logos/eccos.png" alt="" />
+                        </a>
+                        <a
+                            href="https://in2.eu"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-in2"
+                        >
+                            <img src="images/traka_logos/in2.png" alt="" />
+                        </a>
+                        <a
+                            href="https://www.mireo.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-mireo"
+                        >
+                            <img src="images/traka_logos/mireo.png" alt="" />
+                        </a>
+                        <a
+                            href="https://login.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-login"
+                        >
+                            <img src="images/traka_logos/login.png" alt="" />
+                        </a>
+                        <a
+                            href="https://positive.ie"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-positive-equity"
+                        >
+                            <img
+                                src="images/traka_logos/positive-equity.png"
+                                alt=""
+                            />
+                        </a>
+                        <a
+                            href="https://www.tomsoft.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-tomsoft"
+                        >
+                            <img src="images/traka_logos/tomsoft.png" alt="" />
+                        </a>
+                        <a
+                            href="https://www.koncar.hr/hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-koncar"
+                        >
+                            <img src="images/traka_logos/koncar.png" alt="" />
+                        </a>
+                        <a
+                            href="https://www.t.ht.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-t-ht"
+                        >
+                            <img src="images/traka_logos/t-ht.png" alt="" />
+                        </a>
+                        <a
+                            href="https://www.fer.unizg.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-fer"
+                        >
+                            <img src="images/traka_logos/fer.png" alt="" />
+                        </a>
+                        <a
+                            href="https://koios.hr/hr/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-koios"
+                        >
+                            <img src="images/traka_logos/koios.png" alt="" />
+                        </a>
+                    </div>
+
+                    <div class="traka-content" aria-hidden="true">
+                        <a
+                            href="https://www.njuskalo.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-njuskalo"
+                        >
+                            <img src="images/traka_logos/njuskalo.png" alt="" />
+                        </a>
+                        <a
+                            href="https://larics.fer.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-larics"
+                        >
+                            <img src="images/traka_logos/larics.png" alt="" />
+                        </a>
+                        <a
+                            href="https://www.eccos.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-eccos"
+                        >
+                            <img src="images/traka_logos/eccos.png" alt="" />
+                        </a>
+                        <a
+                            href="https://in2.eu"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-in2"
+                        >
+                            <img src="images/traka_logos/in2.png" alt="" />
+                        </a>
+                        <a
+                            href="https://www.mireo.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-mireo"
+                        >
+                            <img src="images/traka_logos/mireo.png" alt="" />
+                        </a>
+                        <a
+                            href="https://login.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-login"
+                        >
+                            <img src="images/traka_logos/login.png" alt="" />
+                        </a>
+                        <a
+                            href="https://positive.ie"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-positive-equity"
+                        >
+                            <img
+                                src="images/traka_logos/positive-equity.png"
+                                alt=""
+                            />
+                        </a>
+                        <a
+                            href="https://www.tomsoft.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-tomsoft"
+                        >
+                            <img src="images/traka_logos/tomsoft.png" alt="" />
+                        </a>
+                        <a
+                            href="https://www.koncar.hr/hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-koncar"
+                        >
+                            <img src="images/traka_logos/koncar.png" alt="" />
+                        </a>
+                        <a
+                            href="https://www.t.ht.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-t-ht"
+                        >
+                            <img src="images/traka_logos/t-ht.png" alt="" />
+                        </a>
+                        <a
+                            href="https://www.fer.unizg.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-fer"
+                        >
+                            <img src="images/traka_logos/fer.png" alt="" />
+                        </a>
+                        <a
+                            href="https://koios.hr/hr/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-koios"
+                        >
+                            <img src="images/traka_logos/koios.png" alt="" />
+                        </a>
+                    </div>
+
+                    <div class="traka-content" aria-hidden="true">
+                        <a
+                            href="https://www.njuskalo.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-njuskalo"
+                        >
+                            <img src="images/traka_logos/njuskalo.png" alt="" />
+                        </a>
+                        <a
+                            href="https://larics.fer.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-larics"
+                        >
+                            <img src="images/traka_logos/larics.png" alt="" />
+                        </a>
+                        <a
+                            href="https://www.eccos.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-eccos"
+                        >
+                            <img src="images/traka_logos/eccos.png" alt="" />
+                        </a>
+                        <a
+                            href="https://in2.eu"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-in2"
+                        >
+                            <img src="images/traka_logos/in2.png" alt="" />
+                        </a>
+                        <a
+                            href="https://www.mireo.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-mireo"
+                        >
+                            <img src="images/traka_logos/mireo.png" alt="" />
+                        </a>
+                        <a
+                            href="https://login.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-login"
+                        >
+                            <img src="images/traka_logos/login.png" alt="" />
+                        </a>
+                        <a
+                            href="https://positive.ie"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-positive-equity"
+                        >
+                            <img
+                                src="images/traka_logos/positive-equity.png"
+                                alt=""
+                            />
+                        </a>
+                        <a
+                            href="https://www.tomsoft.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-tomsoft"
+                        >
+                            <img src="images/traka_logos/tomsoft.png" alt="" />
+                        </a>
+                        <a
+                            href="https://www.koncar.hr/hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-koncar"
+                        >
+                            <img src="images/traka_logos/koncar.png" alt="" />
+                        </a>
+                        <a
+                            href="https://www.t.ht.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-t-ht"
+                        >
+                            <img src="images/traka_logos/t-ht.png" alt="" />
+                        </a>
+                        <a
+                            href="https://www.fer.unizg.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-fer"
+                        >
+                            <img src="images/traka_logos/fer.png" alt="" />
+                        </a>
+                        <a
+                            href="https://koios.hr/hr/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabindex="-1"
+                            class="logo-koios"
+                        >
+                            <img src="images/traka_logos/koios.png" alt="" />
+                        </a>
+                    </div>
                 </div>
-                <div class="schedule-item fade-up">
-                  <span class="schedule-time">09.00 - 11.30</span>
-                  <span class="schedule-activity">dovršavanje zadatka</span>
-                </div>
-                <div class="schedule-item fade-up">
-                  <span class="schedule-time">12.30 - 14.00</span>
-                  <span class="schedule-activity">prezentacije rješenja</span>
-                </div>
-                <div class="schedule-item fade-up">
-                  <span class="schedule-time">14.30</span>
-                  <span class="schedule-activity">proglašenje pobjednika i dodjela nagrada</span>
-                </div>
-              </div>
             </div>
-          </div>
-          <div class="timetable_image_container fade-up">
-            <img
-              src="images/5.jpg"
-              alt="Algotrade 2"
-              class="timetable_image algotrade_2 fade-up"
-            />
-            <div class="timetable_square one fade-up"></div>
-            <div class="timetable_square two fade-up"></div>
-            <div class="timetable_square three fade-up"></div>
-            <div class="timetable_square four fade-up"></div>
-            <div class="timetable_square five fade-up"></div>
-          </div>
-        </div>
-      </div>
 
-      <div class="prize" id="nagrade">
-        <h2 class="h2 prize fade-up">Nagrade</h2>
-        <p class="p prize fade-up">Što dobiva svaki sudionik?</p>
-        <ul class="prize">
-          <li class="li prize fade-up"><span class="span prize">Oprema za rad</span> - sve što koristiš tijekom natjecanja nosiš kući</li>
-          <li class="li prize fade-up"><span class="span prize">Besplatna hrana i piće</span> - kroz cijeli događaj</li>
-          <li class="li prize fade-up"><span class="span prize">Posebni FER & Codeplay materijali</span> - limitirani promo stuff</li>
-          <li class="li prize fade-up"><span class="span prize">Nagrade sponzora</span> - ideš kući bogatiji</li>
-        </ul>
-        <h3 class="h3 prize fade-up">Glavne nagrade</h3>
-        <div class="prize_grid">
-          <div class="prize_grid_one prize_grid_num fade-up">
-            <p class="p prize_grid_p1">1. nagrada</p>
-            <p class="p prize_grid_p2">1000 €</p>
-          </div>
-          <div class="prize_grid_two prize_grid_num fade-up">
-            <p class="p prize_grid_p1">2. nagrada</p>
-            <p class="p prize_grid_p2">600 €</p>
-          </div>
-          <div class="prize_grid_three prize_grid_num fade-up">
-            <p class="p prize_grid_p1">3. nagrada</p>
-            <p class="p prize_grid_p2">400 €</p>
-          </div>
-        </div>
-      </div>
+            <div class="project_info_grid">
+                <p class="p project_info_grid_row datum fade-up">
+                    28. 2. – 1. 3. 2026.
+                </p>
+                <p class="p project_info_grid_row mjesto fade-up">
+                    FER, Zagreb
+                </p>
+                <div class="project_info_grid_row container">
+                    <p class="p project_info_grid_row container fade-up">
+                        20 timova
+                    </p>
+                    <p class="p project_info_grid_row container fade-up">
+                        100 sudionika
+                    </p>
+                    <p class="p project_info_grid_row container fade-up">
+                        20 mentora
+                    </p>
+                </div>
+            </div>
 
-      <div class="faq" id="pitanja">
-        <h2 class="h2 faq_title_h2 fade-up">Najčešće postavljana pitanja</h2>
+            <div class="register">
+                <h2 class="h2 register fade-up">
+                    Zašto&nbsp;se&nbsp;prijaviti?
+                </h2>
+                <div class="register_grid">
+                    <div class="register_item fade-up">
+                        <img
+                            src="images/rocket.svg"
+                            alt="Rocket"
+                            class="register_image fade-up"
+                        />
+                        <div class="register_p fade-up">
+                            <p class="p register_p1">Hands-on izazov</p>
+                            <p class="p register_p2">
+                                Isprobat ćeš pravi inženjerski izazov u
+                                opuštenoj, ali natjecateljskoj atosmferi.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="register_item fade-up">
+                        <img
+                            src="images/hat.svg"
+                            alt="Hat"
+                            class="register_image fade-up"
+                        />
+                        <div class="register_p fade-up">
+                            <p class="p register_p1">Praktično znanje</p>
+                            <p class="p register_p2">
+                                Naučit ćeš kako spojiti kod i elektroniku u
+                                funkcionalan projekt.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="register_item fade-up">
+                        <img
+                            src="images/message.svg"
+                            alt="Message"
+                            class="register_image fade-up"
+                        />
+                        <div class="register_p fade-up">
+                            <p class="p register_p1">Networking</p>
+                            <p class="p register_p2">
+                                Upoznat ćeš studente FER-a koji su već prošli
+                                ono što tebe čeka.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="register_item fade-up">
+                        <img
+                            src="images/heart.svg"
+                            alt="Heart"
+                            class="register_image fade-up"
+                        />
+                        <div class="register_p fade-up">
+                            <p class="p register_p1">Puno zabave</p>
+                            <p class="p register_p2">
+                                Odlična atmosfera, novi prijatelji, nagrade i
+                                puno zabave.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <div class="faq_buttons fade-up">
-          <button class="faq_button selected" data-section="0">Opće</button>
-          <button class="faq_button" data-section="1">Organizacija i logistika</button>
-          <button class="faq_button" data-section="2">Tehnička pitanja</button>
-        </div>
+            <div class="timetable_container fade-up" id="raspored">
+                <div class="timetable">
+                    <div class="timetable_text">
+                        <h2 class="h2 timetable_text_h2 fade-up">Raspored</h2>
+                        <div class="day-selector">
+                            <div
+                                class="day-tab active fade-up"
+                                data-day="saturday"
+                            >
+                                <span class="day-text fade-up"
+                                    >Subota 28. 2.</span
+                                >
+                            </div>
+                            <div class="day-gap fade-up"></div>
+                            <div class="day-tab fade-up" data-day="sunday">
+                                <span class="day-text fade-up"
+                                    >Nedjelja 1. 3.</span
+                                >
+                            </div>
+                        </div>
 
-        <div class="faq_questions fade-up" id="faq_questions"></div>
-      </div>
+                        <div class="schedule-content">
+                            <!-- Saturday Schedule -->
+                            <div
+                                class="schedule-day active"
+                                id="saturday-schedule"
+                            >
+                                <div class="schedule-item fade-up">
+                                    <span class="schedule-time"
+                                        >08.30 - 09.30</span
+                                    >
+                                    <span class="schedule-activity"
+                                        >registracija i doručak</span
+                                    >
+                                </div>
+                                <div class="schedule-item fade-up">
+                                    <span class="schedule-time"
+                                        >09.30 - 10.00</span
+                                    >
+                                    <span class="schedule-activity"
+                                        >otvorenje i početak hackathona</span
+                                    >
+                                </div>
+                                <div class="schedule-item fade-up">
+                                    <span class="schedule-time"
+                                        >13.00 - 15.00</span
+                                    >
+                                    <span class="schedule-activity">ručak</span>
+                                </div>
+                                <div class="schedule-item fade-up">
+                                    <span class="schedule-time"
+                                        >15.00 - 18.30</span
+                                    >
+                                    <span class="schedule-activity"
+                                        >nastavak rada</span
+                                    >
+                                </div>
+                                <div class="schedule-item fade-up">
+                                    <span class="schedule-time"
+                                        >18.00 - 18.30</span
+                                    >
+                                    <span class="schedule-activity"
+                                        >nagradni kviz</span
+                                    >
+                                </div>
+                                <div class="schedule-item fade-up">
+                                    <span class="schedule-time"
+                                        >18.30 - 19.00</span
+                                    >
+                                    <span class="schedule-activity"
+                                        >večera</span
+                                    >
+                                </div>
+                                <div class="schedule-item fade-up">
+                                    <span class="schedule-time"
+                                        >19.00 - 22.00</span
+                                    >
+                                    <span class="schedule-activity"
+                                        >nastavak rada</span
+                                    >
+                                </div>
+                                <div class="schedule-item fade-up">
+                                    <span class="schedule-time">22.00</span>
+                                    <span class="schedule-activity"
+                                        >zatvaranje učionica</span
+                                    >
+                                </div>
+                            </div>
 
-      <!-- <div class="team_photo_container">
+                            <!-- Sunday Schedule -->
+                            <div class="schedule-day" id="sunday-schedule">
+                                <div class="schedule-item fade-up">
+                                    <span class="schedule-time"
+                                        >08.30 - 09.00</span
+                                    >
+                                    <span class="schedule-activity"
+                                        >doručak i okupljanje</span
+                                    >
+                                </div>
+                                <div class="schedule-item fade-up">
+                                    <span class="schedule-time"
+                                        >09.00 - 11.30</span
+                                    >
+                                    <span class="schedule-activity"
+                                        >dovršavanje zadatka</span
+                                    >
+                                </div>
+                                <div class="schedule-item fade-up">
+                                    <span class="schedule-time"
+                                        >12.30 - 14.00</span
+                                    >
+                                    <span class="schedule-activity"
+                                        >prezentacije rješenja</span
+                                    >
+                                </div>
+                                <div class="schedule-item fade-up">
+                                    <span class="schedule-time">14.30</span>
+                                    <span class="schedule-activity"
+                                        >proglašenje pobjednika i dodjela
+                                        nagrada</span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timetable_image_container fade-up">
+                        <img
+                            src="images/5.jpg"
+                            alt="Algotrade 2"
+                            class="timetable_image algotrade_2 fade-up"
+                        />
+                        <div class="timetable_square one fade-up"></div>
+                        <div class="timetable_square two fade-up"></div>
+                        <div class="timetable_square three fade-up"></div>
+                        <div class="timetable_square four fade-up"></div>
+                        <div class="timetable_square five fade-up"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prize" id="nagrade">
+                <h2 class="h2 prize fade-up">Nagrade</h2>
+                <p class="p prize fade-up">Što dobiva svaki sudionik?</p>
+                <ul class="prize">
+                    <li class="li prize fade-up">
+                        <span class="span prize">Oprema za rad</span> - sve što
+                        koristiš tijekom natjecanja nosiš kući
+                    </li>
+                    <li class="li prize fade-up">
+                        <span class="span prize">Besplatna hrana i piće</span> -
+                        kroz cijeli događaj
+                    </li>
+                    <li class="li prize fade-up">
+                        <span class="span prize"
+                            >Posebni FER & Codeplay materijali</span
+                        >
+                        - limitirani promo stuff
+                    </li>
+                    <li class="li prize fade-up">
+                        <span class="span prize">Nagrade sponzora</span> - ideš
+                        kući bogatiji
+                    </li>
+                </ul>
+                <h3 class="h3 prize fade-up">Glavne nagrade</h3>
+                <div class="prize_grid">
+                    <div class="prize_grid_one prize_grid_num fade-up">
+                        <p class="p prize_grid_p1">1. nagrada</p>
+                        <p class="p prize_grid_p2">1000 €</p>
+                    </div>
+                    <div class="prize_grid_two prize_grid_num fade-up">
+                        <p class="p prize_grid_p1">2. nagrada</p>
+                        <p class="p prize_grid_p2">600 €</p>
+                    </div>
+                    <div class="prize_grid_three prize_grid_num fade-up">
+                        <p class="p prize_grid_p1">3. nagrada</p>
+                        <p class="p prize_grid_p2">400 €</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq" id="pitanja">
+                <h2 class="h2 faq_title_h2 fade-up">
+                    Najčešće postavljana pitanja
+                </h2>
+
+                <div class="faq_buttons fade-up">
+                    <button class="faq_button selected" data-section="0">
+                        Opće
+                    </button>
+                    <button class="faq_button" data-section="1">
+                        Organizacija i logistika
+                    </button>
+                    <button class="faq_button" data-section="2">
+                        Tehnička pitanja
+                    </button>
+                </div>
+
+                <div class="faq_questions fade-up" id="faq_questions"></div>
+            </div>
+
+            <!-- <div class="team_photo_container">
         <div class="team_photo_image_container">
           <img
             src="images/team.jpg"
@@ -537,167 +1087,181 @@
           <div class="team_photo_square five fade-up"></div>
         </div>
       </div> -->
-      
-      <div class="carousel">
 
-        <a class="carousel_link" href="gallery/" target="_blank" rel="noopener noreferrer">
-          <div class="carousel-track fade-up">
-            <img src="images/1.jpg" class="slide">
-            <img src="images/2.jpg" class="slide">
-            <img src="images/3.jpg" class="slide">
-            <img src="images/4.jpg" class="slide">
-            <img src="images/5.jpg" class="slide">
-          </div>
-        </a>
+            <div class="carousel">
+                <a
+                    class="carousel_link"
+                    href="gallery/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <div class="carousel-track fade-up">
+                        <img src="images/1.jpg" class="slide" />
+                        <img src="images/2.jpg" class="slide" />
+                        <img src="images/3.jpg" class="slide" />
+                        <img src="images/4.jpg" class="slide" />
+                        <img src="images/5.jpg" class="slide" />
+                    </div>
+                </a>
 
-        <div class="carousel-controls fade-up">
-          <button class="arrow arrow_left">❮</button>
+                <div class="carousel-controls fade-up">
+                    <button class="arrow arrow_left">❮</button>
 
-          <div class="dots"></div>
+                    <div class="dots"></div>
 
-          <button class="arrow arrow_right">❯</button>
+                    <button class="arrow arrow_right">❯</button>
+                </div>
+            </div>
+
+            <div class="promo_partners fade-up">
+                <p class="p promo_partners_text fade-up">Promotivni partneri</p>
+                <div class="promo_partners_logos fade-up">
+                    <a
+                        class="promo_partner_link"
+                        href="https://www.codinggiants.hr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                            src="images/CG_logo.png"
+                            alt="CG"
+                            class="partner-logo cg fade-up"
+                        />
+                    </a>
+                    <a
+                        class="promo_partner_link"
+                        href="https://hrobos.hr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                            src="images/HROBOS_logo.png"
+                            alt="HROBOS"
+                            class="partner-logo hrobos fade-up"
+                        />
+                    </a>
+                    <a
+                        class="promo_partner_link"
+                        href="https://promo-materijali.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                            src="images/mig-mag_logo.png"
+                            alt="MIG-MAG"
+                            class="partner-logo mig-mag fade-up"
+                        />
+                    </a>
+                    <a
+                        class="promo_partner_link"
+                        href="https://dump.hr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                            src="images/dump_logo.png"
+                            alt="DUMP"
+                            class="partner-logo dump fade-up"
+                        />
+                    </a>
+                    <a
+                        class="promo_partner_link"
+                        href="https://www.racunala.hr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                            src="images/racunala_hr_logo.png"
+                            alt="Racunala.hr"
+                            class="partner-logo racunala_hr fade-up"
+                        />
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="footer_container">
+                    <a
+                        class="footer_logo_link"
+                        href="#"
+                        onclick="
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                            return false;
+                        "
+                    >
+                        <img
+                            src="images/codeplay_logo.svg"
+                            alt="Logo"
+                            class="footer_logo fade-up"
+                        />
+                    </a>
+                    <div class="footer_links fade-up">
+                        <div class="footer_email_container">
+                            <p class="p footer_text fade-up">Email</p>
+                            <a
+                                class="p footer_email fade-up"
+                                href="mailto:codeplay@eestec.hr"
+                                >codeplay@eestec.hr</a
+                            >
+                        </div>
+                        <div class="footer_socials">
+                            <a
+                                class="footer_instagram_link"
+                                href="https://www.instagram.com/codeplay_zagreb/?utm_source=ig_web_button_share_sheet"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img
+                                    src="images/instagram.svg"
+                                    alt="Instagram"
+                                    class="footer_instagram fade-up"
+                                />
+                            </a>
+                            <a
+                                class="footer_tiktok_link"
+                                href="https://www.tiktok.com/@codeplay_zagreb?is_from_webapp=1&sender_device=pc"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img
+                                    src="images/tiktok.svg"
+                                    alt="Tiktok"
+                                    class="footer_tiktok fade-up"
+                                />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="partners fade-up">
+                        <a
+                            class="partner_fer_link"
+                            href="https://www.fer.unizg.hr"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                src="images/FER_logo.png"
+                                alt="FER"
+                                class="partner-logo fer fade-up"
+                            />
+                        </a>
+                        <a
+                            class="partner_eestec_link"
+                            href="https://eestec.hr/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <img
+                                src="images/EESTEC_ZG_logo.svg"
+                                alt="EESTEC"
+                                class="partner-logo eestec fade-up"
+                            />
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
 
-      </div>
-
-      <div class="promo_partners fade-up">
-        <p class="p promo_partners_text fade-up">Promotivni partneri</p>
-        <div class="promo_partners_logos fade-up">
-          <a
-            class="promo_partner_link"
-            href="https://www.codinggiants.hr"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="images/CG_logo.png"
-              alt="CG"
-              class="partner-logo cg fade-up"
-            />
-          </a>
-          <a
-            class="promo_partner_link"
-            href="https://hrobos.hr"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="images/HROBOS_logo.png"
-              alt="HROBOS"
-              class="partner-logo hrobos fade-up"
-            />
-          </a>
-          <a
-            class="promo_partner_link"
-            href="https://promo-materijali.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="images/mig-mag_logo.png"
-              alt="MIG-MAG"
-              class="partner-logo mig-mag fade-up"
-            />
-          </a>
-          <a
-            class="promo_partner_link"
-            href="https://dump.hr"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="images/dump_logo.png"
-              alt="DUMP"
-              class="partner-logo dump fade-up"
-            />
-          </a>
-          <a
-            class="promo_partner_link"
-            href="https://www.racunala.hr"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="images/racunala_hr_logo.png"
-              alt="Racunala.hr"
-              class="partner-logo racunala_hr fade-up"
-            />
-          </a>
-        </div>
-      </div>
-
-      <div class="footer">
-        <div class="footer_container">
-        <a class="footer_logo_link" href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
-          <img
-            src="images/codeplay_logo.svg"
-            alt="Logo"
-            class="footer_logo fade-up"
-          />
-        </a>
-        <div class="footer_links fade-up">
-          <div class="footer_email_container">
-            <p class="p footer_text fade-up">Email</p>
-            <a class="p footer_email fade-up" href="mailto:codeplay@eestec.hr">codeplay@eestec.hr</a>
-          </div>
-          <div class="footer_socials">
-            <a
-              class="footer_instagram_link"
-              href="https://www.instagram.com/codeplay_zagreb/?utm_source=ig_web_button_share_sheet"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="images/instagram.svg"
-                alt="Instagram"
-                class="footer_instagram fade-up"
-              />
-            </a>
-            <a
-              class="footer_tiktok_link"
-              href="https://www.tiktok.com/@codeplay_zagreb?is_from_webapp=1&sender_device=pc"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="images/tiktok.svg"
-                alt="Tiktok"
-                class="footer_tiktok fade-up"
-              />
-            </a>
-          </div>
-        </div>
-        <div class="partners fade-up">
-          <a
-            class="partner_fer_link"
-            href="https://www.fer.unizg.hr"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="images/FER_logo.png"
-              alt="FER"
-              class="partner-logo fer fade-up"
-            />
-          </a>
-          <a
-            class="partner_eestec_link"
-            href="https://eestec.hr/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="images/EESTEC_ZG_logo.svg"
-              alt="EESTEC"
-              class="partner-logo eestec fade-up"
-            />
-          </a>
-        </div>
-        </div>
-      </div>
-    </div>
-
-  <!-- JavaScript -->
-  <script src="script.js?v=20260312a"></script>
-</body>
+        <!-- JavaScript -->
+        <script src="script.js?v=20260312a"></script>
+    </body>
 </html>
